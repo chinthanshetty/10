@@ -1,0 +1,107 @@
+   SIH DATABASE SCHEMA
+create table `usertype`(
+  typeid int not null auto_increment,
+  accountType varchar(50) not null unique,
+  primary key(typeid)
+  );
+
+
+create table `allusers`(
+  uid int(100) not null auto_increment,
+  firstname varchar(50) not null,
+  lastname varchar(50) default null,
+  username varchar(100) not null unique,
+  email varchar(100) not null unique,
+  password varchar(100) default null,
+  usertype int not null,
+  datetime timestamp default current_timestamp(),
+  discription text default null,
+  imagelocation text default null unique,
+  pdflocation text default null unique,
+  primary key(uid),
+  foreign key(usertype) references usertype(typeid)
+  );
+
+create table `specialization`(
+  sid int not null auto_increment,
+  sname varchar(50) not null unique,
+  primary key(sid)
+  );
+
+
+
+create table `topics`(
+tid int(100) not null auto_increment,
+  sid int not null,
+  topicName varchar(50) not null,
+  primary key(tid),
+  foreign key(sid) references specialization(sid),
+  CONSTRAINT specializationtopiccombo UNIQUE (sid,topicName)
+);
+
+create table `degree`(
+did int not null auto_increment,
+  dname varchar(50) not null,
+  primary key(did),
+  unique(dname)
+);
+
+create table `userdegree`(
+udid int not null auto_increment,
+  uid int(100) not null,
+  did int not null,
+  primary key(udid),
+  foreign key(uid) references allusers(uid),
+  foreign key (did) references degree(did)
+);
+
+create table `level`(
+lid int not null auto_increment,
+  lname varchar(50) not null,
+  primary key(lid)
+);
+
+create table `skills`(
+skid int not null auto_increment,
+  uid int(100) not null,
+  tid int(100) not null,
+  lid int not null,
+  primary key(skid),
+  foreign key(uid) references allusers(uid),
+  foreign key(tid) references topics(tid),
+  foreign key(lid) references level(lid)
+);
+
+create table `experience`(
+eid int not null auto_increment,
+  uid int(100) not null,
+  experience float null,
+  discription text null,
+  primary key(eid),
+  foreign key(uid) references allusers(uid)
+);
+
+create table `jobs`(
+  jid int not null auto_increment,
+  jname varchar(50) not null,
+  uid int(100) not null,
+  discription text default null,
+  experience float default 0,
+  primary key(jid),
+  foreign key(uid) references allusers(uid)
+  );
+
+create table `jobdetails`(
+  jdid int not null auto_increment,
+  jid int not null,
+  tid int(100) not null,
+  lid int null,
+  primary key(jdid),
+  foreign key(jid) references jobs(jid),
+  foreign key (tid) references topics(tid),
+  foreign key(lid) references level(lid)
+  );
+
+ALTER TABLE skills ADD CONSTRAINT uidtidunique UNIQUE (uid,tid)
+
+ALTER TABLE userdegree ADD CONSTRAINT uiddidunique UNIQUE (uid,did)

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#28BCFF</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark_blue">#3023AE</color>
+    <color name="purple">#c86dd7</color>
+    <color name="colorPrimaryCompany">#99003EB1</color>
+    <color name="colorPrimaryDarkCompany">#CC002B70</color>
+
+    <color name="secondary_text_color_white">#80FFFFFF</color>
+    <color name="secondary_text_material_light">#E6FFFFFF</color>
+
+    <!--dark-->
+    <color name="colorPrimaryNight">#16202c</color>
+    <color name="colorPrimaryDarkNight">#141d26</color>
+    <color name="colorAccentNight">#008577</color>
+
+    <color name="bgColor">#1DA1F2</color>
+    <color name="bgColorNight">#3b3e42</color>
+
+    <color name="bgColorLight">#3328BCFF</color>
+    <color name="bgColorLightNight">#A9A9A9</color>
+
+
+</resources>
