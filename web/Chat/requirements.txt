@@ -1,0 +1,5 @@
+# Usage: pip install -r requirements.txt
+
+Flask==0.12.3
+chatterbot==0.8.4
+SQLAlchemy==1.1.11

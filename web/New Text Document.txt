@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+edited again
+=======
+edit from chinthan
+jhgfdsdfghj
+>>>>>>> 4bdc6c6a568f37956228e0c90b96dbf2181eaf33
+
+edited now to see the pull origin
+
+edited again
+
+edited again
