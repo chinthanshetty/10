@@ -47,7 +47,7 @@ if(isset($_SESSION['username']))
   }
   </style>
 
-  <title>Better Career</title>
+  <title>Home Company</title>
 </head>
 <body>
 
