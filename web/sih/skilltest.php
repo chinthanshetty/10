@@ -143,7 +143,7 @@ session_start();
               {
                   $answer1[]=array('1');
               }
-echo $answer1[];
+
               ?>
               
         </div>
