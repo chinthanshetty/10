@@ -93,7 +93,7 @@ session_start();
       </nav>
       <br><br>
       <div class="container">
-          
+        
           <div class="card pt-4 pb-4 pl-4">
               <h3>Clear your mind, take few minutes to enjoy this session!</h3>
           </div>
@@ -117,15 +117,13 @@ session_start();
             $answer1[]=array($row['answer1']);
             $answer2[]=array($row['answer2']);
         
-        
         ?>
         <div class="col-sm-8">
-            <div class="form-check">
-                <label class="form-check-label1">
+         
                     <?php echo $row['question1']; ?>
-        </label>
+     
         </div>
-        </div>
+        
         <div class="col-sm-2">
             
             <div class="form-check">
