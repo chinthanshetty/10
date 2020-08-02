@@ -1,6 +1,6 @@
 <?php
 include('session_check.php');
-
+include('server.php');
 ?>
 
 <!DOCTYPE html>
@@ -327,7 +327,7 @@ while($row=mysqli_fetch_array($query))
                     $topic= $_POST['topics'];
                     $level= $_POST['level'];
                     
-                    $spe=mysqli_query($con,"select sid from specialization where sname='$specialization'");
+                    $spe=mysqli_query($db,"select sid from specialization where sname='$specialization'");
                     $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
                     $speci=$row1['sid'];
                     echo $speci;
