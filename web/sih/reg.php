@@ -1,5 +1,6 @@
 <?php
 //include('config.php');
+session_start();
 $firstname=$_SESSION['firstname'];
 $lastname=$_SESSION['lastname'];
 $username=$_SESSION['username'];
