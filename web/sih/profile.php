@@ -624,8 +624,9 @@ while($row=mysqli_fetch_array($query))
     </div>
   </div>
 </section>
- 
- 
+ <br>
+  <br>
+ <br>
   <!-- Footer -->
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">
