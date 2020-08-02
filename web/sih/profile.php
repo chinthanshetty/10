@@ -76,7 +76,7 @@ $("#search-box").val(val);
 $("#suggesstion-box").hide();
 }
 </script>	
-  <title>Log In</title>
+  <title>My Profile</title>
 </head>
 
 
@@ -113,12 +113,7 @@ $("#suggesstion-box").hide();
         </ul>
         <ul class="navbar-nav ml-auto">
  
-         <li class="nav-item mr-3">
- 
-           <a class="nav-link" href="logout.php">
- 
-             <i class="fas fa-user-plus"></i>Logout</a>
-          </li>
+        
           
         </ul>
 
@@ -132,7 +127,12 @@ $("#suggesstion-box").hide();
              <i class="fas fa-user-plus"></i> Account Settings</a>
           </li>
           
-		
+		 <li class="nav-item mr-3">
+ 
+           <a class="nav-link" href="logout.php">
+ 
+             <i class="fas fa-user-plus"></i>Logout</a>
+          </li>
 
 		 
         </ul>
@@ -624,8 +624,9 @@ while($row=mysqli_fetch_array($query))
     </div>
   </div>
 </section>
- 
- 
+ <br>
+  <br>
+ <br>
   <!-- Footer -->
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">

@@ -89,6 +89,13 @@ if(isset($_SESSION['username']))
   
         </ul>
         <ul class="navbar-nav ml-auto">
+		   <li class="nav-item mr-3">
+ 
+           <a class="nav-link" href="account.php">
+ 
+             <i class="fas fa-user-plus"></i>Account Setting</a>
+          </li>
+          
  
          <li class="nav-item mr-3">
  
