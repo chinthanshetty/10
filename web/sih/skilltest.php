@@ -127,33 +127,23 @@ session_start();
         <div class="col-md-2">
             
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" id="" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  Yes
-                </label>
+                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="YES" >YES<br>
+                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
+                
               </div>
+        </form>
+            
+              
+        </div>
+       
+        
               <?php
-              if(isset($_POST[$row['sktid']]))
+              $yes=$_POST[$row['sktid']];
+              if($yes=="YES")
               {
                   $answer1[$row['sktid']]='1';
                   echo $answer1[$row['sktid']];
-              }
-
-              ?>
-              
-        </div>
-        <div class="col-md-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" id="" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  No
-                </label>
-              </div>
-              <?php
-              if(isset($_POST[$row['sktid']]))
-              {
-                  $answer1[$row['sktid']]='0';
-                  echo $answer1[$row['sktid']];
+                  echo "hey!";
               }
 
               ?>
