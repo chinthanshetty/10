@@ -177,7 +177,7 @@ if(isset($_SESSION['username']))
 		     <div class="row py-2 text-secondary">
                
                 <div class="col-12">
-                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
+                  <i class="fas fa-car"></i>  Skill match :<?php echo round($rw['match_percentage']);?> </div>
               </div>
            
               <hr>
