@@ -248,7 +248,7 @@ $("#suggesstion-box").hide();
                    								<?php $query =mysqli_query($con,"SELECT * FROM specialization");
 while($row=mysqli_fetch_array($query))
 { ?>
-<option value="<?php echo $row['sid'];?>"><?php echo $row['sname'];?></option>
+<option value="<?php echo $row['sname'];?>"><?php echo $row['sname'];?></option>
 <?php
 }
 ?>
