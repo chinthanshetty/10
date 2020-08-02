@@ -146,7 +146,7 @@ if(isset($_POST['save']))
 
               <h4>
  
-               <i class="fas fa-sign-in-alt"></i> Login</h4>
+               <i class="fas fa-sign-in-alt"></i> Change Password</h4>
             </div>
 
             <div class="card-body">
