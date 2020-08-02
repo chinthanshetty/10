@@ -209,10 +209,13 @@ while($row=mysqli_fetch_array($result)){
         if(isset($_POST['LEVEL1']))
         {
           $r=0;
-          while($answer1[$r]==1&&$answer2[$r]==1){
-            echo $tid[$r];
-            $r++;
-          } 
+          print_r($answer1);
+          print_r($answer2);
+          foreach($answer1 as $a1 && $answer2 as $a2){
+            if($a1==1&&$a2==1){
+              echo "hey";
+            }
+          }
                 
             
         }
