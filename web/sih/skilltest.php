@@ -109,7 +109,7 @@ session_start();
         <?php
         include("session_check.php");
         session_start();
-        $result=($con,"select * from skilltest");
+        $result=mysqli_query($con,"select * from skilltest");
         while($row=mysqli_fetch_array($result)){
             $sktid[]=array($row['sktid']);
             $tid[]=array($row['tid']);
