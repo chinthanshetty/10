@@ -146,7 +146,11 @@ if(isset($_SESSION['username']))
               <div class="row py-2 text-secondary">
                 <div class="col-6">
                   <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
-                <div class="col-6">
+               
+              </div>
+		     <div class="row py-2 text-secondary">
+               
+                <div class="col-12">
                   <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
               </div>
            
