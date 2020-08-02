@@ -139,12 +139,13 @@ session_start();
                 </label>
               </div>
               <?php
-              /*if(isset($_POST['1']))
+              if(isset($_POST['1']))
               {
                   $answer1[]=array('1');
-              }*/
-
+              }
+echo $answer1[];
               ?>
+              
         </div>
         <div class="col-sm-2">
             <div class="form-check">
@@ -162,13 +163,13 @@ session_start();
         <input type="submit" name="try">
         </form>
         <?php
-        if(isset($_POST['try']))
+    /*    if(isset($_POST['try']))
         {
             while($r=mysqli_fetch_array($answer1))
             {
-                echo $r;
+                echo $r[];
             }
-        }
+        }*/
         ?>
     </div>
 </div>
