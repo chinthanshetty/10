@@ -95,7 +95,7 @@ session_start();
       <div class="container">
         
           <div class="card pt-4 pb-4 pl-4">
-              <h3>Clear your mind, take few minutes to enjoy this session! abcd</h3>
+              <h3>Clear your mind, take few minutes to enjoy this session!! </h3>
           </div>
       </div>
       <br>
@@ -140,7 +140,7 @@ session_start();
               {
                   $answer1[$row['sktid']]='1';
                   //echo $answer1[$row['sktid']];
-                  echo "me";
+                 // echo "me";
               }
 
               ?>
@@ -206,15 +206,20 @@ while($row=mysqli_fetch_array($result)){
         <input type="submit" value="LEVEL1" name="LEVEL1">
     </form>
          <?php
-        if(isset($_POST['LEVEL1']))
+        /*if(isset($_POST['LEVEL1']))
         {
-            $r1=0;
-           // echo "hey";
+          $r=0;
+          print_r($answer1);
+          print_r($answer2);
+          foreach(array_combine($answer1,$answer2) as $a1 => $a2){
+            if($a1==1&&$a2==1){
+              echo "hey";
+            }
+          }
                 
             
-        }
-        print_r($answer1);
-        print_r($answer2);
+        }*/
+       
         ?>
         
         
