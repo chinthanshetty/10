@@ -28,7 +28,24 @@ if(isset($_SESSION['username']))
 
   <!-- Custom -->
   <link rel="stylesheet" href="assets/css/style.css">
+<style>body{
+    background-color: #F8F9FA;
+  }
 
+  .co{
+    text-decoration: none;
+    color: white;
+  }
+  .a{
+    background-color: #28bcff;
+  }
+  .a:hover{
+    background-color: #2196f3;
+  }
+  .al{
+    background-color: #2196f3;
+  }
+  </style>
 
   <title>Better Career</title>
 </head>
@@ -36,7 +53,7 @@ if(isset($_SESSION['username']))
 
 <!-- Navbar -->
 
-  <nav class="navbar navbar-expand-lg al bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark al bg-primary fixed-top">
 
     <div class="container">
 
