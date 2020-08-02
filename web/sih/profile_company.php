@@ -456,7 +456,7 @@ while($row=mysqli_fetch_array($query))
                   <!-- remove this if <p> tag its printing thr details in table -->
                   
                     <?php }} ?>
- <br><br>
+ <br><br><br><br><br><br>
   <!-- Footer -->
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">
