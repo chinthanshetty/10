@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/bgColor"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/emp_email_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="20dp"
+        android:text="email"
+        android:textColor="@color/secondary_text_color_white"
+        android:textColorHighlight="@color/secondary_text_color_white"
+        android:textColorHint="@color/secondary_text_color_white"
+        android:textColorLink="@color/secondary_text_color_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emp_name_dp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/e_dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circle_bag"
+        android:contentDescription="TODO"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/emp_name_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="name"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textColorHighlight="@color/design_default_color_on_primary"
+        android:textColorHint="@color/design_default_color_on_primary"
+        android:textColorLink="@color/design_default_color_on_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e_dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
