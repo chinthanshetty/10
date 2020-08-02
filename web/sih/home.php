@@ -158,7 +158,7 @@ if(isset($_SESSION['username']))
 
               <div class="row py-2 text-secondary">
               <div class="col-12">
-                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobdiscription'];?> </div>
+                  <i class="fas fa-th-large"></i> Description: <?php echo $rw['jobdiscription'];?> </div>
               </div>
               <hr>
               <a href="listing.html" class="btn btn-primary btn-block">Apply Now</a>
