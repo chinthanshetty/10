@@ -139,7 +139,7 @@ session_start();
               if($yes=="YES")
               {
                   $answer1[$row['sktid']]='1';
-                  echo $answer1[$row['sktid']];
+                  //echo $answer1[$row['sktid']];
                   
               }
 
@@ -151,8 +151,8 @@ session_start();
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="LEVEL1" name="LEVEL1">
-    </form>
+        
+    
          <?php
         if(isset($_POST['LEVEL1']))
         {
@@ -165,7 +165,7 @@ session_start();
         <?php
 $result=mysqli_query($con,"select * from skilltest");
 ?>
-<form action="" method="post">
+
     <?php
 while($row=mysqli_fetch_array($result)){
    
@@ -203,10 +203,10 @@ while($row=mysqli_fetch_array($result)){
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="LEVEL2" name="LEVEL2">
+        <input type="submit" value="LEVEL1" name="LEVEL1">
     </form>
          <?php
-        if(isset($_POST['LEVEL2']))
+        if(isset($_POST['LEVEL1']))
         {
             $r1=0;
            // echo "hey";
