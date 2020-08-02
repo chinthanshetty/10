@@ -1,0 +1,9 @@
+<?php
+include('config.php');
+$firstname=$_SESSION['firstname'];
+$lastname=$_SESSION['lastname'];
+$username=$_SESSION['username'];
+$email=$_SESSION['email'];
+$password=$_SESSION['password'];
+$type=$_SESSION['type'];
+?>

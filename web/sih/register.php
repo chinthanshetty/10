@@ -1,6 +1,7 @@
 <?php include('server.php') ;
 include('otpset.php');
-if (isset($_POST['otpsub'])) {
+include('reg.php');
+if (isset($_POST['reg_user'])) {
   // receive all input values from the form
   $firstname= mysqli_real_escape_string($db, $_POST['firstname']);
   $lastname= mysqli_real_escape_string($db, $_POST['lastname']);
@@ -22,7 +23,7 @@ if (isset($_POST['otpsub'])) {
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
   $user_check_query = "SELECT * FROM allusers WHERE username='$username' OR email='$email' LIMIT 1";
-  $result = mysqli_query($db, $user_check_query);
+  $result = mysqli_query($con, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { // if user exists
@@ -38,13 +39,15 @@ if (isset($_POST['otpsub'])) {
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
-	
-  	$query = "INSERT INTO allusers (firstname,lastname, username, email, password,usertype)  VALUES('$firstname','$lastname', '$username', '$email', '$password','1')";
-  	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
+    $_SESSION['firstname']=$firstname;
+    $_SESSION['lastname']=$lastname;
+    $_SESSION['username']=$username;
+    $_SESSION['email']=$email;
+    $_SESSION['password']=$password;
+    $_SESSION['type']="1";
     $_SESSION['success'] = "You are now logged in";
     include('otpset.php');
-$rndno=rand(100000, 999999);//OTP generate
+    $rndno=rand(100000, 999999);//OTP generate
     
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
