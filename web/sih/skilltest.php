@@ -151,17 +151,67 @@ session_start();
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="try" name="try">
+        <input type="submit" value="LEVEL1" name="LEVEL1">
          <?php
-        if(isset($_POST['try']))
+        if(isset($_POST['LEVEL1']))
         {
             $r1=0;
-            echo "hey";
-            print_r(array_values($answer1));
+            
                 
             
         }
         ?>
+        <?php
+$result=mysqli_query($con,"select * from skilltest");
+?>
+<form action="" method="post">
+    <?php
+while($row=mysqli_fetch_array($result)){
+   
+?>
+<div class="col-md-8">
+ 
+            <?php echo $row['question2']; ?>
+
+</div>
+
+<div class="col-md-2">
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="YES" >YES<br>
+        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
+        
+      </div>
+</div>
+
+
+      <?php
+      $yes=$_POST[$row['sktid']];
+      if($yes=="YES")
+      {
+          $answer1[$row['sktid']]='1';
+          echo $answer1[$row['sktid']];
+          
+      }
+
+      ?>
+       </div>
+        <?php
+        
+        }
+       // echo $answer1;
+        ?>
+        <input type="submit" value="LEVEL2" name="LEVEL2">
+         <?php
+        if(isset($_POST['LEVEL2']))
+        {
+            $r1=0;
+            echo "hey";
+                
+            
+        }
+        ?>
+        
     </div>
 </div>
     
