@@ -131,9 +131,6 @@ session_start();
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
                 
               </div>
-        </form>
-            
-              
         </div>
        
         
@@ -154,9 +151,8 @@ session_start();
         }
         echo $answer1;
         ?>
-        <input type="submit" name="try">
-        </form>
-        <?php
+        <input type="submit" value="try" name="try">
+         <?php
         if(isset($_POST['try']))
         {
             $r1=0;
