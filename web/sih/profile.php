@@ -332,7 +332,7 @@ while($row=mysqli_fetch_array($query))
                     $spe=mysqli_query($con,"select sid from specialization where sname='$specialization'");
                     $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
                     $speci=$row1['sid'];
-                    echo $speci;
+                    echo "hey";
                     $top=mysqli_query($con,"select tid from topics where topicName='$topic' and sid='$speci'");
                     $row2=mysqli_fetch_array($top,MYSQLI_ASSOC);
                     $topi=$row2['tid'];
