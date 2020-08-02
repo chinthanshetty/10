@@ -116,7 +116,7 @@ session_start();
             $question2[]=$row['question2'];
             $answer1[]=$row['answer1'];
             $answer2[]=$row['answer2'];
-            print_r($answer1);
+            print_r($sktid);
         ?>
         <div class="col-md-8">
          
