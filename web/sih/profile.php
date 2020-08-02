@@ -126,7 +126,12 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-user-plus"></i> Account Settings</a>
           </li>
-          
+          <ul class="navbar-nav ml-auto">
+		
+         <li class="nav-item mr-3">
+		 <span class="google_translate_element"></span>
+		 </li>
+		 
         </ul>
       </div>
     </div>
