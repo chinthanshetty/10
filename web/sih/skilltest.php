@@ -169,9 +169,11 @@ session_start();
         <?php
         if(isset($_POST['try']))
         {
+            $r1=0;
             while($r=mysqli_fetch_array($answer1))
             {
-                echo $r;
+                echo $r[$r1];
+                $r1++;
             }
         }
         ?>
