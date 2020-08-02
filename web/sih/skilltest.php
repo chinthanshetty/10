@@ -95,7 +95,7 @@ session_start();
       <div class="container">
         
           <div class="card pt-4 pb-4 pl-4">
-              <h3>Clear your mind, take few minutes to enjoy this session!!! </h3>
+              <h3>Clear your mind, take few minutes to enjoy this session!! </h3>
           </div>
       </div>
       <br>
