@@ -64,6 +64,24 @@ $("#suggesstion-box").hide();
 }
 </script>	
 
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        <style>
+            .goog-logo-link {
+                display:none !important;
+             } 
+             
+             .goog-te-gadget{
+                color: transparent !important;
+             }
+				.goog-te-banner-frame.skiptranslate{
+			display: none;
+		}
+
+</style>
 
   <title>Company Profile</title>
 </head>
@@ -108,7 +126,7 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-user-plus"></i>Logout</a>
           </li>
-          
+          <span id="google_translate_element"> </span>
         </ul>
 
 
@@ -484,7 +502,7 @@ while($row=mysqli_fetch_array($query))
   <script src="assets/js/jquery-3.3.1.min.js "></script>
 
   <script src="assets/js/bootstrap.bundle.min.js "></script>
-
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="assets/js/main.js "></script>
 </body>
 
