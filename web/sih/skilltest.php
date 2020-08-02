@@ -140,7 +140,7 @@ session_start();
               {
                   $answer1[$row['sktid']]='1';
                   //echo $answer1[$row['sktid']];
-                  
+                  echo "me";
               }
 
               ?>
