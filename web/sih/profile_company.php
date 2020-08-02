@@ -65,7 +65,7 @@ $("#suggesstion-box").hide();
 </script>	
 
 
-  <title>Log In</title>
+  <title>Company Profile</title>
 </head>
 
 
