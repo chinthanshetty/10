@@ -81,7 +81,7 @@ if(isset($_POST['save']))
   }
   </style>
 
-  <title>Log In</title>
+  <title>Account Setting</title>
 </head>
 
 <body>
@@ -110,7 +110,7 @@ if(isset($_POST['save']))
 
           <li class="nav-item mr-3">
 
-            <a class="nav-link" href="login_company.php">Login</a>
+            <a class="nav-link" href="home_company.php">Home</a>
           </li>
           
           

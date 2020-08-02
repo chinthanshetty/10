@@ -115,7 +115,7 @@
 
                     <p class="lead" style="font-size: 25px;">Find a better career for yourself!!!</p><br>
 
-
+                    
                     <button class="btn al  btn-lg" type="button"
                         onclick="location.href='register.php';">EMPLOYEE</button>
 <span class="as"></span>
