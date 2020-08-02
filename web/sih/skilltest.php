@@ -110,6 +110,9 @@ session_start();
         include("session_check.php");
         session_start();
         $result=mysqli_query($con,"select * from skilltest");
+        ?>
+        <form action="" method="post">
+            <?php
         while($row=mysqli_fetch_array($result)){
             $sktid[]=array($row['sktid']);
             $tid[]=array($row['tid']);
@@ -128,45 +131,43 @@ session_start();
         </div>
         </div>
         <div class="col-sm-2">
+            
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
+                <input class="form-check-input" type="radio" name="1" id="<?php echo $sktid[];?>" value="option1" >
                 <label class="form-check-label" for="exampleRadios1">
                   Yes
                 </label>
               </div>
+              <?php
+              if(isset($_POST['1']))
+              {
+                  $answer1[]='1';
+              }
+
+              ?>
         </div>
         <div class="col-sm-2">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
+                <input class="form-check-input" type="radio" name="2" id="<?php echo $sktid[];?>" value="option1" >
                 <label class="form-check-label" for="exampleRadios1">
                   No
                 </label>
               </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <label class="form-check-label1">
-                    <?php echo $row['question2']; ?>
-        </label>
-        </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  Yes
-                </label>
-              </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  No
-                </label>
-              </div>
+              
         </div>
         <?php
+        
+        }
+        ?>
+        <input type="submit" name="try">
+        </form>
+        <?php
+        if(isset($_POST['try']))
+        {
+            while($r=mysqli_fetch_array($answer1))
+            {
+                echo $r[];
+            }
         }
         ?>
     </div>
