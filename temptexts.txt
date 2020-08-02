@@ -1,0 +1,1 @@
+SELECT specialization.sname,topics.topicName,question1,question2 from specialization,topics,skilltest where topics.sid=specialization.sid and topics.tid=skilltest.tid
