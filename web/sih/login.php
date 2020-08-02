@@ -1,11 +1,13 @@
 <?php include('server.php') ;
+include('config.php');
 session_start();
 if (isset($_POST['login_user'])) {
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $password = mysqli_real_escape_string($db, $_POST['password']);
+  $username = mysqli_real_escape_string($con, $_POST['username']);
+ // $email= mysqli_real_escape_string($db, $_POST['email']);
+  $password = mysqli_real_escape_string($con, $_POST['password']);
 
   if (empty($username)) {
-  	array_push($errors, "Username is required");
+  	array_push($errors, "Username or Email is required");
   }
   if (empty($password)) {
   	array_push($errors, "Password is required");
@@ -13,10 +15,11 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	$password = md5($password);
-  	$query = "SELECT * FROM allusers WHERE username='$username' AND password='$password'";
-  	$results = mysqli_query($db, $query);
+  	$query = "SELECT * FROM allusers WHERE username='$username' AND email='$email' AND password='$password'";
+  	$results = mysqli_query($con, $query);
   	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['username'] = $username;
+      $_SESSION['username'] = $username OR $email;
+      
       $_SESSION['success'] = "You are now logged in";
       
   	  header("location: profile.php");
@@ -151,7 +154,7 @@ if (isset($_POST['login_user'])) {
 
                 <div class="form-group">
 
-                  <label for="username">Username</label>
+                  <label for="username">Username or Password</label>
 
                   <input type="text" name="username" class="form-control" required>
                 </div>
