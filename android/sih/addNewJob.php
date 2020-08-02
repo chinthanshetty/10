@@ -7,6 +7,9 @@ if(isset($_POST['title'])){
 if(isset($_POST['years'])){
     $years = $_POST['years'];
 }
+if(isset($_POST['location'])){
+    $location = $_POST['location'];
+}
 if(isset($_POST['discription'])){
     $discription = $_POST['discription'];
 }
@@ -17,7 +20,8 @@ $userdetails = array(
     'title' => $title,
     'years' => $years,
     'discription' => $discription,
-    'username' => $username
+    'username' => $username,
+    'location' => $location
 );
 if (addNewJob($userdetails)) {
     $response['success'] = "1";
@@ -30,8 +34,8 @@ if (addNewJob($userdetails)) {
 }
 function addNewJob($userdetails) {
     require './db.php';
-    $query = "INSERT INTO jobs(uid,jname,discription,experience) VALUES
-     ((SELECT uid FROM allusers where username=:username),:title,:discription,:years)";
+    $query = "INSERT INTO jobs(uid,jname,discription,experience,location) VALUES
+     ((SELECT uid FROM allusers where username=:username),:title,:discription,:years,:location)";
     $stmt = $pdo->prepare($query);
     return $stmt->execute($userdetails);
 }
