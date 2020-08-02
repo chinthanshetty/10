@@ -186,8 +186,13 @@ while($row=mysqli_fetch_array($result)){
 
 
       <?php
+<<<<<<< HEAD
       $yes=$_POST[$row['sktid'.'r']];
       if($yes=="YES")
+=======
+      $yess=$_POST[$row['sktid']];
+      if($yess=="YES")
+>>>>>>> 93a1212628b192da08fab956db9ff3ed0d768d5b
       {
           $answer2[$row['sktid']]='1';
           echo $answer2[$row['sktid']];
