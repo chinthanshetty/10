@@ -110,12 +110,12 @@ session_start();
         <form action="" method="post">
             <?php
         while($row=mysqli_fetch_array($result)){
-            $sktid[]=array($row['sktid']);
-            $tid[]=array($row['tid']);
-            $question1[]=array($row['question1']);
-            $question2[]=array($row['question2']);
-            $answer1[]=array($row['answer1']);
-            $answer2[]=array($row['answer2']);
+            $sktid=array($row['sktid']);
+            $tid=array($row['tid']);
+            $question1=array($row['question1']);
+            $question2=array($row['question2']);
+            $answer1=array($row['answer1']);
+            $answer2=array($row['answer2']);
         
         ?>
         <div class="col-md-8">
