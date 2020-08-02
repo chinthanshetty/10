@@ -133,10 +133,10 @@ session_start();
                 </label>
               </div>
               <?php
-              /*if(isset($_POST['1']))
+              if(isset($_POST['1']))
               {
-                  $answer1[]='1');
-              }*/
+                  $answer1[$row['sktid']]='1';
+              }
 
               ?>
               
