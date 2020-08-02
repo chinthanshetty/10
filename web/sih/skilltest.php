@@ -162,6 +162,7 @@ session_start();
         <?php
         
         }
+        echo $answer1;
         ?>
         <input type="submit" name="try">
         </form>
