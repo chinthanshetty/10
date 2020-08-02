@@ -79,6 +79,7 @@
     //include('otpset.php');
     
     include('reg.php');
+    include('config.php');
         if(isset($_POST['otpsub'])){
                 $otp1=$_POST['OTP'];
                 echo $otp1;
