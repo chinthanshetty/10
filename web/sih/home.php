@@ -170,7 +170,7 @@ if(isset($_SESSION['username']))
               </div>
               <hr>
               <div class="row py-2 text-secondary">
-                <div class="col-6">
+                <div class="col-12">
                   <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
                
               </div>
