@@ -328,7 +328,7 @@ while($row=mysqli_fetch_array($query))
                     $specialization= $_POST['specialization'];
                     $topic= $_POST['topics'];
                     $level= $_POST['level'];
-                    echo $specialization;
+                    echo $topic;
                     $spe=mysqli_query($con,"select sid from specialization where sname='$specialization'");
                     $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
                     $speci=$row1['sid'];
