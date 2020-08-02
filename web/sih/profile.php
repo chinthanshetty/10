@@ -40,9 +40,7 @@ include('server.php');
              .goog-te-gadget{
                 color: transparent !important;
              }
-		.goog-te-banner-frame.skiptranslate{
-			display: none;
-		}
+
         </style>
 <style>body{
     background-color: #F8F9FA;
