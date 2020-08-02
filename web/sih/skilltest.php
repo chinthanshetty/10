@@ -187,7 +187,7 @@ while($row=mysqli_fetch_array($result)){
 
       <?php
 
-      $yes=$_POST[$row['sktid'.'r']];
+      $yes=$_POST[$row['sktid'].'r'];
       if($yes=="YES")
       {
           $answer2[$row['sktid']]='1';
