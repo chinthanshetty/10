@@ -66,7 +66,7 @@ body {
   <div class="centered">
     <img src="img_avatar2.png" alt="Employee">
     <h2>Employee</h2>
-    <!-- <p>Some text.</p> -->
+    <p>Some text.</p>
   </div>
 </div>
 </button>
@@ -76,7 +76,7 @@ body {
   <div class="centered">
     <img src="img/urban.png" alt="Company">
     <h2>Company</h2>
-    <!-- <p>Some text here too.</p> -->
+    <p>Some text here too.</p>
   </div>
 </div>
 </button>
