@@ -81,7 +81,7 @@ if(isset($_POST['save']))
   }
   </style>
 
-  <title>Log In</title>
+  <title>Account Setting</title>
 </head>
 
 <body>

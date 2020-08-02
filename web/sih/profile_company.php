@@ -65,7 +65,7 @@ $("#suggesstion-box").hide();
 </script>	
 
 
-  <title>Log In</title>
+  <title>Company Profile</title>
 </head>
 
 
@@ -133,7 +133,7 @@ $("#suggesstion-box").hide();
 
       <div class="row">
 
-        <div class="col-md-6 mx-auto">
+       <div class="col-lg-6 col-md-4">
 
           <div class="card">
 
@@ -248,7 +248,7 @@ $("#suggesstion-box").hide();
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6 col-md-8 col-sm-12">
         <div class="card">
           <div class="card-header a text-white">
             <h4>
@@ -310,7 +310,7 @@ $("#suggesstion-box").hide();
 <section id="jobskill" class="bg-light py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-4 col-md-4 col-sm-12">
           <div class="card">
             <div class="card-header a text-white">
               <h4>
@@ -378,13 +378,14 @@ while($row=mysqli_fetch_array($query))
           </div>
         </div>
         <!-- i addedc this part -->
-        <div class="col-md-6">
+         <div class=" col-lg-8 col-md-8 col-sm-12">
           <div class="card">
             <div class="card-header a text-white">
               <h4>
                 <i class="fas fa-user"></i> Job Skills</h4>
             </div>
             <div class="card-body">
+		    <div style="overflow-x:auto;">
               <table class="table table-striped">
 
                 <thead>
@@ -456,7 +457,22 @@ while($row=mysqli_fetch_array($query))
                   <!-- remove this if <p> tag its printing thr details in table -->
                   
                     <?php }} ?>
- <br><br><br><br><br><br>
+                  </tbody>
+                                </table>
+                                </div>
+                        </div> 
+                        <!-- crd table -->
+                        <!-- main card end -->
+                    </div>
+<!-- col end -->
+                </div>
+
+             
+
+            </div>
+        </div>
+    </section>
+<br>
   <!-- Footer -->
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">
