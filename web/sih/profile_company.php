@@ -170,7 +170,7 @@ $("#suggesstion-box").hide();
                 <input type="file" value="Select Profile" class="btn btn-primary a" name="profile-pic" id="profile-pic" />
                 <input type="submit" id="save_crop" class="btn btn-primary a" value="crop&save" /><br>
                 </form>
-
+<br>
                   <p class="form-control">Username: <?php echo $rows['username']; ?> 
 
 
