@@ -339,7 +339,7 @@ while($row=mysqli_fetch_array($query))
                     $lev=mysqli_query($con,"select lid from level where lname='$level'");
                     $row3=mysqli_fetch_array($lev,MYSQLI_ASSOC);
                     $leve=$row3['lid'];
-                    
+                    echo $topi;
                     $query1="INSERT INTO skills (uid,tid,lid) VALUES ('$loggedin_id','$topi','$leve')";
                     mysqli_query($con,$query1);
                     //$_SESSION['topic']=$topi;
