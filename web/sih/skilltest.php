@@ -133,7 +133,7 @@ session_start();
         <div class="col-sm-2">
             
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="1" id="<?php echo $row['sktid'];?>" value="option1" >
+                <input class="form-check-input" type="radio" name="<?php echo $sktid[];?>" id="" value="option1" >
                 <label class="form-check-label" for="exampleRadios1">
                   Yes
                 </label>
@@ -149,7 +149,7 @@ session_start();
         </div>
         <div class="col-sm-2">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="1" id="<?php echo $row['sktid'];?>" value="option1" >
+                <input class="form-check-input" type="radio" name="<?php echo $sktid[];?>" id="" value="option1" >
                 <label class="form-check-label" for="exampleRadios1">
                   No
                 </label>
