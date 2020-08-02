@@ -327,11 +327,8 @@ while($row=mysqli_fetch_array($query))
                     $topic= $_POST['topics'];
                     $level= $_POST['level'];
                     
-                    $spe=mysqli_query($db,"select sid from specialization where sname='$specialization'");
-                    $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
-                    $speci=$row1['sid'];
-                    echo $speci;
-                    $top=mysqli_query($con,"select tid from topics where topicName='$topic' and sid='$speci'");
+                
+                    $top=mysqli_query($con,"select tid from topics where topicName='$topic' and sid='$specialization'");
                     $row2=mysqli_fetch_array($top,MYSQLI_ASSOC);
                     $topi=$row2['tid'];
                     $lev=mysqli_query($con,"select lid from level where lname='$level'");
