@@ -245,7 +245,7 @@ $("#suggesstion-box").hide();
     <!-- <th width="27%" height="63" scope="row">Spec :</th> -->
     <td width="73%"><select onChange="gettopic(this.value);"  name="specialization" id="specialization" class="form-control" >
                     <option value="">Select</option>
-                   								<?php $query =mysqli_query($con,"SELECT * FROM specialization");
+                   								<?php $query =mysqli_query($db,"SELECT * FROM specialization");
 while($row=mysqli_fetch_array($query))
 { ?>
 <option value="<?php echo $row['sid'];?>"><?php echo $row['sname'];?></option>
