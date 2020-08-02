@@ -128,9 +128,7 @@ $("#suggesstion-box").hide();
           </li>
           
 		
-         <li class="nav-item mr-3">
-		 <span class="google_translate_element"></span>
-		 </li>
+
 		 
         </ul>
       </div>
@@ -629,7 +627,7 @@ while($row=mysqli_fetch_array($query))
     Copyright &copy;
     <span class="year"></span> Better Career <div id="google_translate_element"></div>
   </footer>
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
   <script src="assets/js/jquery-3.3.1.min.js "></script>
