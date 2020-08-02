@@ -211,7 +211,7 @@ while($row=mysqli_fetch_array($result)){
           $r=0;
           print_r($answer1);
           print_r($answer2);
-          foreach($answer1 as $a1 && $answer2 as $a2){
+          foreach(array_combine($answer1,$answer2) as $a1 => $a2){
             if($a1==1&&$a2==1){
               echo "hey";
             }
