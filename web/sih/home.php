@@ -51,7 +51,7 @@ if(isset($_SESSION['username']))
 
 <!-- Navbar -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 
     <div class="container">
 
@@ -101,7 +101,7 @@ if(isset($_SESSION['username']))
  
            <a class="nav-link" href="logout.php">
  
-             <i class="fas fa-user-plus"></i>Logout</a>
+             <i class="fas fa-sign-in-alt"></i>Logout</a>
           </li>
           
         </ul>

@@ -131,7 +131,7 @@ $("#suggesstion-box").hide();
  
            <a class="nav-link" href="logout.php">
  
-             <i class="fas fa-user-plus"></i>Logout</a>
+             <i class="fas fa-sign-in-alt"></i>Logout</a>
           </li>
 
 		 
