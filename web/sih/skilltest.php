@@ -141,7 +141,7 @@ session_start();
               <?php
               if(isset($_POST['1']))
               {
-                  $answer1[]='1';
+                  $answer1[]=array('1');
               }
 
               ?>
