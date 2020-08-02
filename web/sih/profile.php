@@ -137,7 +137,9 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-sign-in-alt"></i>Logout</a>
           </li>
-
+		<li>
+<span id="google_translate_element"> </span>
+		</li>
 		 
         </ul>
       </div>
@@ -635,7 +637,7 @@ while($row=mysqli_fetch_array($query))
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">
     Copyright &copy;
-	  <span class="year"></span> Better Career <span id="google_translate_element"> </span>
+	  <span class="year"></span> Better Career 
   </footer>
       <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
