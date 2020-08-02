@@ -151,7 +151,7 @@ $("#suggesstion-box").hide();
                 
                 <?php
                 $sql="SELECT * FROM allusers where uid=$loggedin_id";
-                $result=mysqli_query($db,$sql);
+                $result=mysqli_query($con,$sql);
                 ?>
                 <?php
                 while($rows=mysqli_fetch_array($result)){
@@ -179,7 +179,7 @@ $("#suggesstion-box").hide();
                 
                 <form method="post" action="profile.php">
                 <?php
-                $ress=mysqli_query($db,"select * from allusers where uid='$loggedin_id'");
+                $ress=mysqli_query($con,"select * from allusers where uid='$loggedin_id'");
                 $dis=mysqli_fetch_array($ress,MYSQLI_ASSOC);
                 $diss=$dis['discription'];
                 ?>
@@ -193,7 +193,7 @@ $("#suggesstion-box").hide();
                   $discs=$_POST['discs'];
                  
                  // echo $_POST['discs'];
-                  $del=mysqli_query($db,"select * from allusers where uid='$loggedin_id'");
+                  $del=mysqli_query($con,"select * from allusers where uid='$loggedin_id'");
                   $del1=mysqli_fetch_array($del,MYSQLI_ASSOC);
                   $discp=$del1['discription'];
 
@@ -203,14 +203,14 @@ $("#suggesstion-box").hide();
                  // $query5="ALTER TABLE allusers MODIFY discription (text) NOT NULL where uid='$loggedin_id'";
                   //mysqli_query($db,$query5);
                     $query6=" INSERT INTO allusers (discription) VALUES ('$discs',false) WHERE uid='$loggedin_id'";
-                   mysqli_query($db,$query6);
+                   mysqli_query($con,$query6);
                     $query7="UPDATE allusers SET discription='$discs' WHERE uid='$loggedin_id'";
-                    mysqli_query($db,$query7);
+                    mysqli_query($con,$query7);
                     
                   }
                   else{
                     $query6="UPDATE allusers SET discription='$discs' WHERE uid='$loggedin_id'";
-                    mysqli_query($db,$query6);
+                    mysqli_query($con,$query6);
                   
                   
                   }
@@ -329,40 +329,40 @@ while($row=mysqli_fetch_array($query))
                     $topic= $_POST['topics'];
                     $level= $_POST['level'];
                     
-                    $spe=mysqli_query($db,"select sid from specialization where sname='$specialization'");
+                    $spe=mysqli_query($con,"select sid from specialization where sname='$specialization'");
                     $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
                     $speci=$row1['sid'];
                     
-                    $top=mysqli_query($db,"select tid from topics where topicName='$topic' and sid='$speci'");
+                    $top=mysqli_query($con,"select tid from topics where topicName='$topic' and sid='$speci'");
                     $row2=mysqli_fetch_array($top,MYSQLI_ASSOC);
                     $topi=$row2['tid'];
-                    $lev=mysqli_query($db,"select lid from level where lname='$level'");
+                    $lev=mysqli_query($con,"select lid from level where lname='$level'");
                     $row3=mysqli_fetch_array($lev,MYSQLI_ASSOC);
                     $leve=$row3['lid'];
                     
                     $query1="INSERT INTO skills (uid,tid,lid) VALUES ('$loggedin_id','$topi','$leve')";
-                    mysqli_query($db,$query1);
+                    mysqli_query($con,$query1);
                     //$_SESSION['topic']=$topi;
                    // $_SESSION['level']=$leve;
                     //$_SESSION['specialization']=$speci;
                     //header('location:home.php');
                   
                 }
-                $res=mysqli_query($db,"select * from skills where uid='$loggedin_id'");
+                $res=mysqli_query($con,"select * from skills where uid='$loggedin_id'");
                 while($r=mysqli_fetch_array($res)){
                   $t=$r['tid'];
-                  $t1=mysqli_query($db,"select * from topics where tid='$t'");
+                  $t1=mysqli_query($con,"select * from topics where tid='$t'");
                   $r1=mysqli_fetch_array($t1,MYSQLI_ASSOC);
                   $t2=$r1['topicName'];
                   $s=$r1['sid'];
-                  $s1=mysqli_query($db,"select * from specialization where sid='$s'");
+                  $s1=mysqli_query($con,"select * from specialization where sid='$s'");
                   $r2=mysqli_fetch_array($s1,MYSQLI_ASSOC);
                   $s2=$r2['sname'];
                   $l=$r['lid'];
-                  $l1=mysqli_query($db,"select * from level where lid='$l'");
+                  $l1=mysqli_query($con,"select * from level where lid='$l'");
                   $r3=mysqli_fetch_array($l1,MYSQLI_ASSOC);
                   $l2=$r3['lname'];
-                  $skidd=mysqli_query($db,"select * from skills where  tid='$t'and lid='$l' and uid='$loggedin_id'");
+                  $skidd=mysqli_query($con,"select * from skills where  tid='$t'and lid='$l' and uid='$loggedin_id'");
                   $r4=mysqli_fetch_array($skidd,MYSQLI_ASSOC);
                   $st2=$r4['skid'];
                   ?>
@@ -451,21 +451,21 @@ while($row=mysqli_fetch_array($query))
                   
                   $degree=$_POST['Degree'];
                   
-                  $deg=mysqli_query($db,"select did from degree where dname='$degree'");
+                  $deg=mysqli_query($con,"select did from degree where dname='$degree'");
                     $row4=mysqli_fetch_array($deg,MYSQLI_ASSOC);
                     $dege=$row4['did'];
                     
                     $query2="INSERT INTO userdegree (uid,did) VALUES ('$loggedin_id','$dege')";
-                    mysqli_query($db,$query2);
+                    mysqli_query($con,$query2);
                   
                 }
-                $res1=mysqli_query($db,"select * from userdegree where uid='$loggedin_id'");
+                $res1=mysqli_query($con,"select * from userdegree where uid='$loggedin_id'");
                 while($r=mysqli_fetch_array($res1)){
                   $d=$r['did'];
-                  $d1=mysqli_query($db,"select * from degree where did='$d'");
+                  $d1=mysqli_query($con,"select * from degree where did='$d'");
                   $r1=mysqli_fetch_array($d1,MYSQLI_ASSOC);
                   $d2=$r1['dname'];
-                  $userid=mysqli_query($db,"select * from userdegree where did='$d' and uid='$loggedin_id'");
+                  $userid=mysqli_query($con,"select * from userdegree where did='$d' and uid='$loggedin_id'");
                   $r6=mysqli_fetch_array($userid,MYSQLI_ASSOC);
                   $udid=$r6['udid'];
                   ?>
@@ -535,7 +535,7 @@ while($row=mysqli_fetch_array($query))
               <?php
               if(isset($_POST['jexp'])){
               $query3="INSERT INTO experience (uid,experience,discription) VALUES ('$loggedin_id','$dur','$jd')";
-              mysqli_query($db,$query3);
+              mysqli_query($con,$query3);
               if($sql>0){
                 //header("location:http://".$_SERVER['HTTP_HOsT'].dirname($_SERVER['PHP_SELF'])."/profile.php");
               }
@@ -579,7 +579,7 @@ while($row=mysqli_fetch_array($query))
                 */
               
                 
-                $res2=mysqli_query($db,"select * from experience where uid='$loggedin_id'");
+                $res2=mysqli_query($con,"select * from experience where uid='$loggedin_id'");
                 while($r=mysqli_fetch_array($res2)){
                   
                   $e=$r['experience'];
