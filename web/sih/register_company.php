@@ -111,7 +111,7 @@ if (isset($_POST['reg_user'])) {
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item mr-3">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Back</a>
           </li>
           
         </ul>
