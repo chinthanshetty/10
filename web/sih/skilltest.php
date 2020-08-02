@@ -156,6 +156,7 @@ session_start();
         if(isset($_POST['try']))
         {
             $r1=0;
+            echo "hey";
             while($r=mysqli_fetch_array($answer1))
             {
                 echo "hey";
