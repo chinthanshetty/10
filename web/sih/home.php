@@ -128,7 +128,7 @@ if(isset($_SESSION['username']))
 
 
  <!-- <div style="clear:both">
-         <p><?php echo $rw['Company_Name'].'-'.$rw['Job_Name'].'-'.$rw['Job_Discription'].'-'.$rw['Match_Percentage'];?></p><br>
+         <p><?php echo $rw['companyname'].'-'.$rw['jobname'].'-'.$rw['jobdiscription'].'-'.$rw['match_percentage'];?></p><br>
          </div> -->
   <!-- Listing 1 -->
   <div class="col-md-6 col-lg-4 mb-4">
@@ -138,22 +138,22 @@ if(isset($_SESSION['username']))
             </div>
             <div class="card-body">
               <div class="listing-heading text-center">
-                <h4 class="text-primary"><?php echo $rw['Company_Name'];?></h4>
+                <h4 class="text-primary"><?php echo $rw['companyname'];?></h4>
                 
               </div>
               <hr>
               <div class="row py-2 text-secondary">
                 <div class="col-6">
-                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['Job_Name'];?> </div>
+                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
                 <div class="col-6">
-                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['Match_Percentage'];?> </div>
+                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
               </div>
            
               <hr>
 
               <div class="row py-2 text-secondary">
               <div class="col-12">
-                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['Job_Discription'];?> </div>
+                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobdiscription'];?> </div>
               </div>
               <hr>
               <a href="listing.html" class="btn btn-primary btn-block">Apply Now</a>
