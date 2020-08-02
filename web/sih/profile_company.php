@@ -1,6 +1,6 @@
 <?php
 include('session_check.php');
-include('config.php');
+include('server.php');
 ?>
 
 
