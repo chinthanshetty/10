@@ -1,6 +1,6 @@
 <?php
 include('session_check.php');
-include('server.php');
+include('config.php');
 ?>
 
 
@@ -150,7 +150,7 @@ $("#suggesstion-box").hide();
                 <div class="form-group">
                 <?php
                 $sql="SELECT * FROM allusers where uid=$loggedin_id";
-                $result=mysqli_query($db,$sql);
+                $result=mysqli_query($con,$sql);
                 ?>
                 <?php
                 while($rows=mysqli_fetch_array($result)){
@@ -236,7 +236,7 @@ $("#suggesstion-box").hide();
               <?php
               if(isset($_POST['jexp'])){
               $query3="INSERT INTO jobs (jname,uid,experience,discription) VALUES ('$jn','$loggedin_id','$dur','$jd')";
-              mysqli_query($db,$query3);
+              mysqli_query($con,$query3);
               if($sql>0){
                 //header("location:http://".$_SERVER['HTTP_HOsT'].dirname($_SERVER['PHP_SELF'])."/profile.php");
               }
@@ -269,7 +269,7 @@ $("#suggesstion-box").hide();
              
               
                 
-                $res2=mysqli_query($db,"select * from jobs where uid='$loggedin_id'");
+                $res2=mysqli_query($con,"select * from jobs where uid='$loggedin_id'");
                 while($r=mysqli_fetch_array($res2)){
                   
                   $e=$r['experience'];
