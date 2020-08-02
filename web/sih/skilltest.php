@@ -149,6 +149,14 @@ session_start();
                   No
                 </label>
               </div>
+              <?php
+              if(isset($_POST[$row['sktid']]))
+              {
+                  $answer1[$row['sktid']]='0';
+                  echo $answer1[$row['sktid']];
+              }
+
+              ?>
               
         </div>
         <?php
