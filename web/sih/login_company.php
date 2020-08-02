@@ -150,7 +150,7 @@ if (isset($_POST['login_user'])) {
 
                 <div class="form-group">
 
-                  <label for="username">Username</label>
+                  <label for="username">Username or Email</label>
 
                   <input type="text" name="username" class="form-control" required>
                 </div>
