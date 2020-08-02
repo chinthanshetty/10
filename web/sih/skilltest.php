@@ -102,6 +102,32 @@
                 <h3>Question is here</h3>
             
         </div>
+        <?php
+        include("session_check.php");
+        $sktid=array();
+        $tid=array();
+        $question1=array();
+        $question2=array();
+        $answer1=array();
+        $answer2=array();
+        $result=($con,"select * from skilltest");
+        while($row=mysqli_fetch_array($result)){
+            $sktid=array_merge($sktid,array_map('trim',explode(",",$row['sktid'])));
+            $tid=array_merge($tid,array_map('trim',explode(",",$row['tid'])));
+            $question1=array_merge($question1,array_map('trim',explode(",",$row['question1'])));
+            $question2=array_merge($question2,array_map('trim',explode(",",$row['question2'])));
+            $answer1=array_merge($answer1,array_map('trim',explode(",",$row['answer1'])));
+            $answer2=array_merge($answer2,array_map('trim',explode(",",$row['answer2'])));
+        
+        
+        ?>
+        <div class="col-sm-2">
+            <div class="form-check">
+                <label class="form-check-label1">
+                    <?php echo $row['sktid'] ?>
+        </label>
+        </div>
+        </div>
         <div class="col-sm-2">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
@@ -118,6 +144,9 @@
                 </label>
               </div>
         </div>
+        <?php
+        }
+        ?>
     </div>
 </div>
     
