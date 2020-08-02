@@ -118,13 +118,13 @@ session_start();
             $answer2[]=array($row['answer2']);
         
         ?>
-        <div class="col-sm-8">
+        <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
      
         </div>
         
-        <div class="col-sm-2">
+        <div class="col-md-2">
             
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" id="" value="option1" >
@@ -141,7 +141,7 @@ session_start();
               ?>
               
         </div>
-        <div class="col-sm-2">
+        <div class="col-md-2">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" id="" value="option1" >
                 <label class="form-check-label" for="exampleRadios1">
