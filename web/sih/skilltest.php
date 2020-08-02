@@ -136,6 +136,7 @@ session_start();
               if(isset($_POST['1']))
               {
                   $answer1[$row['sktid']]='1';
+                  echo $answer1[$row['sktid']];
               }
 
               ?>
