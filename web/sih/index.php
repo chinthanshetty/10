@@ -71,7 +71,7 @@ body {
 </div>
 </button>
 <button type="button"
-                        onclick="location.href='register.php';">
+                        onclick="location.href='register_company.php';">
 <div class="split right">
   <div class="centered">
     <img src="img/urban.png" alt="Company">
