@@ -95,7 +95,7 @@ session_start();
       <div class="container">
         
           <div class="card pt-4 pb-4 pl-4">
-              <h3>Clear your mind, take few minutes to enjoy this session! </h3>
+              <h3>Clear your mind, take few minutes to enjoy this session!!! </h3>
           </div>
       </div>
       <br>
@@ -140,7 +140,7 @@ session_start();
               {
                   $answer1[$row['sktid']]='1';
                   //echo $answer1[$row['sktid']];
-                  echo "me";
+                 // echo "me";
               }
 
               ?>
@@ -211,6 +211,7 @@ while($row=mysqli_fetch_array($result)){
           $r=0;
           while($answer1[$r]==1&&$answer2[$r]==1){
             echo $tid[$r];
+            $r++;
           } 
                 
             
