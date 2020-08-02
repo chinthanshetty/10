@@ -27,7 +27,15 @@ include('server.php');
   <!-- Custom -->
  
  <link rel="stylesheet" href="assets/css/style.css">
-
+ <style>
+            .goog-logo-link {
+                display:none !important;
+             } 
+             
+             .goog-te-gadget{
+                color: transparent !important;
+             }
+        </style>
 <style>body{
     background-color: #F8F9FA;
   }
@@ -614,8 +622,9 @@ while($row=mysqli_fetch_array($query))
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">
     Copyright &copy;
-    <span class="year"></span> Better Career
+    <span class="year"></span> Better Career <span id= "google_translate_element"></span>
   </footer>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
   <script src="assets/js/jquery-3.3.1.min.js "></script>
