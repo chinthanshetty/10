@@ -400,18 +400,15 @@ while($row=mysqli_fetch_array($query))
 <?php
                 if(isset($_POST['jobskill'])){
                     $specialization= $_POST['specialization'];
-                    $topic= $_POST['topic'];
+                    $topic= $_POST['topics'];
                     $level= $_POST['level'];
 
                     $jt=mysqli_query($db,"select jid from jobs where jname='$jnam'");
                     $row4=mysqli_fetch_array($jt,MYSQLI_ASSOC);
                     $jtitle=$row4['jid'];
                     
-                    $spe=mysqli_query($db,"select sid from specialization where sname='$specialization'");
-                    $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
-                    $speci=$row1['sid'];
                     
-                    $top=mysqli_query($db,"select tid from topics where topicName='$topic' and sid='$speci'");
+                    $top=mysqli_query($db,"select tid from topics where topicName='$topic' and sid='$specialization'");
                     $row2=mysqli_fetch_array($top,MYSQLI_ASSOC);
                     $topi=$row2['tid'];
 
