@@ -46,6 +46,24 @@ if(isset($_SESSION['username']))
     background-color: #2196f3;
   }
   </style>
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        <style>
+            .goog-logo-link {
+                display:none !important;
+             } 
+             
+             .goog-te-gadget{
+                color: transparent !important;
+             }
+				.goog-te-banner-frame.skiptranslate{
+			display: none;
+		}
+
+</style>
 
   <title>Home Company</title>
 </head>
@@ -98,6 +116,7 @@ if(isset($_SESSION['username']))
  
              <i class="fas fa-user-plus"></i>Logout</a>
           </li>
+		<span id="google_translate_element"> </span>
           
         </ul>
 
@@ -186,7 +205,7 @@ if(isset($_SESSION['username']))
  
  <script src="assets/js/bootstrap.bundle.min.js "></script>
   <script src="assets/js/main.js "></script>
-
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		
 </body>
 </html>
