@@ -116,7 +116,7 @@ session_start();
             $question2[]=$row['question2'];
             $answer1[]=$row['answer1'];
             $answer2[]=$row['answer2'];
-            print_r($sktid);
+           
         ?>
         <div class="col-md-8">
          
@@ -140,7 +140,7 @@ session_start();
               {
                   $answer1[$row['sktid']]='1';
                   echo $answer1[$row['sktid']];
-                  echo "hey!";
+                  
               }
 
               ?>
@@ -149,7 +149,7 @@ session_start();
         <?php
         
         }
-        echo $answer1;
+       // echo $answer1;
         ?>
         <input type="submit" value="try" name="try">
          <?php
@@ -158,6 +158,7 @@ session_start();
             $r1=0;
             while($r=mysqli_fetch_array($answer1))
             {
+                echo "hey";
                 echo $r[$r1];
                 $r1++;
             }
