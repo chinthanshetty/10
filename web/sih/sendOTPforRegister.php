@@ -77,6 +77,7 @@
     <button type="submit" class="btn btn-secondary btn-block a" name="otpsub" >Submit</button>
   	<?php
     include('otpset.php');
+    
     include('reg.php');
         if(isset($_POST['otpsub'])){
                 $otp1=$_POST['OTP'];

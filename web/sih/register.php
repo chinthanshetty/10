@@ -1,14 +1,14 @@
-<?php include('server.php') ;
+<?php include('config.php') ;
 include('otpset.php');
 include('reg.php');
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $firstname= mysqli_real_escape_string($db, $_POST['firstname']);
-  $lastname= mysqli_real_escape_string($db, $_POST['lastname']);
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $email = mysqli_real_escape_string($db, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+  $firstname= mysqli_real_escape_string($con, $_POST['firstname']);
+  $lastname= mysqli_real_escape_string($con, $_POST['lastname']);
+  $username = mysqli_real_escape_string($con, $_POST['username']);
+  $email = mysqli_real_escape_string($con, $_POST['email']);
+  $password_1 = mysqli_real_escape_string($con, $_POST['password_1']);
+  $password_2 = mysqli_real_escape_string($con, $_POST['password_2']);
 //  $usertype= mysqli_real_escape_string($db, $_POST['usertype']);
 
   // form validation: ensure that the form is correctly filled ...
