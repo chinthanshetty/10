@@ -163,13 +163,13 @@ session_start();
         <input type="submit" name="try">
         </form>
         <?php
-    /*    if(isset($_POST['try']))
+        if(isset($_POST['try']))
         {
             while($r=mysqli_fetch_array($answer1))
             {
                 echo $r[];
             }
-        }*/
+        }
         ?>
     </div>
 </div>
