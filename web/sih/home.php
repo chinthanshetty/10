@@ -114,21 +114,22 @@ if(isset($_SESSION['username']))
 
        <?php
        include('session_check.php');
-       $homie="SELECT allusers.firstname as Company_Name,matched.jobname as Job_Name,matched.jobdiscription as Job_Discription,(matched.skillsmatched/allmatches.totalskillsinthejob)*100 as Match_Percentage FROM
-       (SELECT j.jid as jobid,j.jname as jobname,j.uid as companyid,j.discription as jobdiscription, count(*) as skillsmatched from jobs j,skills s, jobdetails jd, allusers u where u.uid=s.uid and u.username='$loggedin_session' and s.tid=jd.tid and jd.jid=j.jid group by j.jid) matched
-       JOIN
-       (SELECT jd.jid as jobid, count(*) as totalskillsinthejob from jobdetails jd group by jd.jid) allmatches
-       ON matched.jobid=allmatches.jobid
-       JOIN allusers on allusers.uid=matched.companyid
-       ORDER BY Match_Percentage desc";
-       $home=mysqli_query($db,$homie);
+       $homie="SELECT jobid,firstname as companyname,jname as jobname,discription as jobdiscription,experience,
+       location,match_percentage from (SELECT * from(SELECT t3.jobid as jobid,t3.sum/t4.total as match_percentage
+        from (select t1.jjid as jobid, sum(t1.cal) as sum from (SELECT j.jid as jjid,j.jdid as jdid ,j.lid as
+         jlid, s.lid as slid,  if(s.lid > j.lid, (s.lid-j.lid)*10+100,100-(j.lid-s.lid)*30) as cal from jobdetails j,
+          skills s,allusers au where j.tid = s.tid and s.uid = au.uid and au.username=username) t1 group by t1.jjid)
+           t3 join (SELECT jd.jid as jjjid,COUNT(*) as total FROM jobdetails jd GROUP by jd.jid)t4 on t3.jobid=t4.jjjid)t5
+            join (SELECT * from jobs)t6 on t6.jid=t5.jobid) t7 join (SELECT firstname,uid from allusers)t8 on t7.uid=t8.uid";
+            
+       $home=mysqli_query($con,$homie);
        while($rw=mysqli_fetch_array($home)){
          ?>
  
 
 
  <!-- <div style="clear:both">
-         <p><?php echo $rw['Company_Name'].'-'.$rw['Job_Name'].'-'.$rw['Job_Discription'].'-'.$rw['Match_Percentage'];?></p><br>
+         <p><?php echo $rw['companyname'].'-'.$rw['jobname'].'-'.$rw['jobdiscription'].'-'.$rw['match_percentage'];?></p><br>
          </div> -->
   <!-- Listing 1 -->
   <div class="col-md-6 col-lg-4 mb-4">
@@ -138,22 +139,26 @@ if(isset($_SESSION['username']))
             </div>
             <div class="card-body">
               <div class="listing-heading text-center">
-                <h4 class="text-primary"><?php echo $rw['Company_Name'];?></h4>
+                <h4 class="text-primary"><?php echo $rw['companyname'];?></h4>
                 
               </div>
               <hr>
               <div class="row py-2 text-secondary">
                 <div class="col-6">
-                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['Job_Name'];?> </div>
-                <div class="col-6">
-                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['Match_Percentage'];?> </div>
+                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
+               
+              </div>
+		     <div class="row py-2 text-secondary">
+               
+                <div class="col-12">
+                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
               </div>
            
               <hr>
 
               <div class="row py-2 text-secondary">
               <div class="col-12">
-                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['Job_Discription'];?> </div>
+                  <i class="fas fa-th-large"></i> Description: <?php echo $rw['jobdiscription'];?> </div>
               </div>
               <hr>
               <a href="listing.html" class="btn btn-primary btn-block">Apply Now</a>
@@ -179,10 +184,10 @@ if(isset($_SESSION['username']))
 </div>
 </section>
 
-  
+  <br>
 
-
-
+  <br>
+  <br>
  
 
 

@@ -1,6 +1,6 @@
 <?php include('server.php') ;
 include('otpset.php');
-if (isset($_POST['reg_user'])) {
+if (isset($_POST['otpsub'])) {
   // receive all input values from the form
   $firstname= mysqli_real_escape_string($db, $_POST['firstname']);
   $lastname= mysqli_real_escape_string($db, $_POST['lastname']);

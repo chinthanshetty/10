@@ -53,7 +53,7 @@ if(isset($_SESSION['username']))
 
 <!-- Navbar -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark al bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark al fixed-top">
 
     <div class="container">
 

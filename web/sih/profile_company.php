@@ -1,7 +1,8 @@
 <?php
 include('session_check.php');
-
+include('server.php');
 ?>
+
 
 <!DOCTYPE html>
 
@@ -46,7 +47,22 @@ include('session_check.php');
     background-color: #2196f3;
   }
   </style>
-
+<script>
+function gettopic(val) {
+	$.ajax({
+	type: "POST",
+	url: "get_district.php",
+	data:'spec_id='+val,
+	success: function(data){
+		$("#topic-list").html(data);
+	}
+	});
+}
+function selectCountry(val) {
+$("#search-box").val(val);
+$("#suggesstion-box").hide();
+}
+</script>	
 
 
   <title>Log In</title>
@@ -303,7 +319,30 @@ include('session_check.php');
             <div class="card-body">
               <form method="post" action="profile_company.php">
               <input type="text" name="discs" class="form-control" style="height:100px" placeholder="Set Description" value="<?php echo $jnam; ?>"><br></br>
-                <div class="form-group">
+                
+              <table width="100%" height="117"  border="0">
+  <tr>
+    <!-- <th width="27%" height="63" scope="row">Spec :</th> -->
+    <td width="73%"><select onChange="gettopic(this.value);"  name="specialization" id="specialization" class="form-control" >
+                    <option value="">Select</option>
+                   								<?php $query =mysqli_query($con,"SELECT * FROM specialization");
+while($row=mysqli_fetch_array($query))
+{ ?>
+<option value="<?php echo $row['sid'];?>"><?php echo $row['sname'];?></option>
+<?php
+}
+?>
+                    </select></td>
+  </tr>
+  <tr>
+    <!-- <th scope="row">Topic :</th> -->
+    <td><select name="topics" id="topic-list" class="form-control">
+<option value="">Select</option>
+</select></td>
+  </tr>
+</table>
+
+                <!-- <div class="form-group">
                   <select name="specialization" class="form-control" id="type">
                     <option selected="true" disabled="disabled">Specialization</option>
                     <option value="Computer Science">Computer Science</option>
@@ -312,16 +351,16 @@ include('session_check.php');
                     <option value="Softwares">Softwares</option>
 
                   </select>
-                </div>
+                </div> -->
                 <!-- value chnages based on the id of specialization -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <select name="topic" class="form-control" id="type">
                     <option selected="true" disabled="disabled">Topic</option>  
                     <option>Java</option>
                     <option>C</option>
 
                   </select>
-                </div>
+                </div> -->
 
                 <div class="form-group">
                   <select name="level" class="form-control" id="type">
@@ -361,18 +400,15 @@ include('session_check.php');
 <?php
                 if(isset($_POST['jobskill'])){
                     $specialization= $_POST['specialization'];
-                    $topic= $_POST['topic'];
+                    $topic= $_POST['topics'];
                     $level= $_POST['level'];
 
                     $jt=mysqli_query($db,"select jid from jobs where jname='$jnam'");
                     $row4=mysqli_fetch_array($jt,MYSQLI_ASSOC);
                     $jtitle=$row4['jid'];
                     
-                    $spe=mysqli_query($db,"select sid from specialization where sname='$specialization'");
-                    $row1=mysqli_fetch_array($spe,MYSQLI_ASSOC);
-                    $speci=$row1['sid'];
                     
-                    $top=mysqli_query($db,"select tid from topics where topicName='$topic' and sid='$speci'");
+                    $top=mysqli_query($db,"select tid from topics where topicName='$topic' and sid='$specialization'");
                     $row2=mysqli_fetch_array($top,MYSQLI_ASSOC);
                     $topi=$row2['tid'];
 
