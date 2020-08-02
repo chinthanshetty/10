@@ -167,7 +167,7 @@ session_start();
         {
             while($r=mysqli_fetch_array($answer1))
             {
-                echo $r[];
+                echo $r;
             }
         }
         ?>
