@@ -65,8 +65,8 @@ body {
 <div class="split left">
   <div class="centered">
     <img src="img/employee.png" alt="Employee">
-    <h1 style="color:white;">Employee</h1>
-    <p>click here to continue</p>
+    <h1 style="color:white;font-size: 30px;">Employee</h1>
+    <!-- <p>click here to continue</p> -->
   </div>
 </div>
 </button>
@@ -75,8 +75,8 @@ body {
 <div class="split right">
   <div class="centered">
     <img src="img/urban.png" alt="Company">
-    <h1 style="color:white;">Company</h1>
-    <p>click here to continue</p>
+    <h1 style="color:white;font-size: 30px;">Company</h1>
+    <!-- <p>click here to continue</p> -->
   </div>
 </div>
 </button>
