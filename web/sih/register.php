@@ -1,5 +1,5 @@
 <?php include('config.php') ;
-include('otpset.php');
+//include('otpset.php');
 include('reg.php');
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
@@ -46,7 +46,7 @@ if (isset($_POST['reg_user'])) {
     $_SESSION['password']=$password;
     $_SESSION['type']="1";
     $_SESSION['success'] = "You are now logged in";
-    include('otpset.php');
+    //include('otpset.php');
     $rndno=rand(100000, 999999);//OTP generate
     
     ini_set( 'display_errors', 1 );
