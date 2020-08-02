@@ -27,7 +27,12 @@ include('server.php');
   <!-- Custom -->
  
  <link rel="stylesheet" href="assets/css/style.css">
- <style>
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        <style>
             .goog-logo-link {
                 display:none !important;
              } 
@@ -625,7 +630,7 @@ while($row=mysqli_fetch_array($query))
 
   <footer id="main-footer" class="py-4 fixed-bottom al text-white text-center">
     Copyright &copy;
-    <span class="year"></span> Better Career 
+	  <span class="year"></span> Better Career <span id="google_translate_element"> </span>
   </footer>
       <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
