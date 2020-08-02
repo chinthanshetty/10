@@ -189,8 +189,8 @@ while($row=mysqli_fetch_array($result)){
       $yes=$_POST[$row['sktid']];
       if($yes=="YES")
       {
-          $answer1[$row['sktid']]='1';
-          echo $answer1[$row['sktid']];
+          $answer2[$row['sktid']]='1';
+          echo $answer2[$row['sktid']];
           
       }
 
