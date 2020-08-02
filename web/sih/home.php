@@ -120,7 +120,7 @@ if(isset($_SESSION['username']))
          jlid, s.lid as slid,  if(s.lid > j.lid, (s.lid-j.lid)*10+100,100-(j.lid-s.lid)*30) as cal from jobdetails j,
           skills s,allusers au where j.tid = s.tid and s.uid = au.uid and au.username=username) t1 group by t1.jjid)
            t3 join (SELECT jd.jid as jjjid,COUNT(*) as total FROM jobdetails jd GROUP by jd.jid)t4 on t3.jobid=t4.jjjid)t5
-            join (SELECT * from jobs)t6 on t6.jid=t5.jobid) t7 join (SELECT firstname,uid from allusers)t8 on t7.uid=t8.uid"); ";
+            join (SELECT * from jobs)t6 on t6.jid=t5.jobid) t7 join (SELECT firstname,uid from allusers)t8 on t7.uid=t8.uid";
        $home=mysqli_query($db,$homie);
        while($rw=mysqli_fetch_array($home)){
          ?>
