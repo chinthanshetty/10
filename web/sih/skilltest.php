@@ -93,7 +93,7 @@ session_start();
       </nav>
       <br><br>
       <div class="container">
-          
+        
           <div class="card pt-4 pb-4 pl-4">
               <h3>Clear your mind, take few minutes to enjoy this session!</h3>
           </div>
@@ -110,63 +110,109 @@ session_start();
         <form action="" method="post">
             <?php
         while($row=mysqli_fetch_array($result)){
-            $sktid[]=array($row['sktid']);
-            $tid[]=array($row['tid']);
-            $question1[]=array($row['question1']);
-            $question2[]=array($row['question2']);
-            $answer1[]=array($row['answer1']);
-            $answer2[]=array($row['answer2']);
-        
-        
+            $sktid[]=$row['sktid'];
+            $tid[]=$row['tid'];
+            $question1[]=$row['question1'];
+            $question2[]=$row['question2'];
+            $answer1[]=$row['answer1'];
+            $answer2[]=$row['answer2'];
+           
         ?>
-        <div class="col-sm-8">
-            <div class="form-check">
-                <label class="form-check-label1">
+        <div class="col-md-8">
+         
                     <?php echo $row['question1']; ?>
-        </label>
+     
         </div>
-        </div>
-        <div class="col-sm-2">
+        
+        <div class="col-md-2">
             
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" id="" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  Yes
-                </label>
+                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="YES" >YES<br>
+                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
+                
               </div>
+        </div>
+       
+        
               <?php
-              /*if(isset($_POST['1']))
+              $yes=$_POST[$row['sktid']];
+              if($yes=="YES")
               {
-                  $answer1[]='1');
-              }*/
+                  $answer1[$row['sktid']]='1';
+                  echo $answer1[$row['sktid']];
+                  
+              }
 
               ?>
               
         </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" id="" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  No
-                </label>
-              </div>
-              
-        </div>
         <?php
         
         }
+       // echo $answer1;
         ?>
-        <input type="submit" name="try">
-        </form>
-        <?php
-        if(isset($_POST['try']))
+        <input type="submit" value="LEVEL1" name="LEVEL1">
+         <?php
+        if(isset($_POST['LEVEL1']))
         {
-            while($r=mysqli_fetch_array($answer1))
-            {
-                echo $r;
-            }
+            $r1=0;
+            
+                
+            
         }
         ?>
+        <?php
+$result=mysqli_query($con,"select * from skilltest");
+?>
+<form action="" method="post">
+    <?php
+while($row=mysqli_fetch_array($result)){
+   
+?>
+<div class="col-md-8">
+ 
+            <?php echo $row['question2']; ?>
+
+</div>
+
+<div class="col-md-2">
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="YES" >YES<br>
+        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="NO" >NO<br>
+        
+      </div>
+</div>
+
+
+      <?php
+
+      $yes=$_POST[$row['sktid'].'r'];
+      if($yes=="YES")
+      {
+          $answer2[$row['sktid']]='1';
+          echo $answer2[$row['sktid']];
+          
+      }
+
+      ?>
+       </div>
+        <?php
+        
+        }
+       // echo $answer1;
+        ?>
+        <input type="submit" value="LEVEL2" name="LEVEL2">
+         <?php
+        if(isset($_POST['LEVEL2']))
+        {
+            $r1=0;
+            echo "hey";
+                
+            
+        }
+        ?>
+        
     </div>
 </div>
     
