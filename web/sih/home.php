@@ -120,7 +120,7 @@ if(isset($_SESSION['username']))
  
              <i class="fas fa-sign-in-alt"></i>Logout</a>
           </li>
-          <span id="google_translate_element"> </span>
+          <span id="google_translate_element" class="btn"> </span>
 
         </ul>
 
@@ -128,7 +128,9 @@ if(isset($_SESSION['username']))
       </div>
     </div>
   </nav>
-
+	<div class="container">
+		<h3>Jobs that matches your skills</h3>
+	</div>
   <section id="listings" class="py-4">
     <div class="container">
       <div class="row">
