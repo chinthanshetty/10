@@ -101,11 +101,7 @@ session_start();
       <br>
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
-            
-                <h3>Question is here</h3>
-            
-        </div>
+
         <?php
         include("session_check.php");
         session_start();
@@ -123,7 +119,7 @@ session_start();
         
         
         ?>
-        <div class="col-sm-2">
+        <div class="col-sm-8">
             <div class="form-check">
                 <label class="form-check-label1">
                     <?php echo $row['question1']; ?>
@@ -139,10 +135,10 @@ session_start();
                 </label>
               </div>
               <?php
-              if(isset($_POST['1']))
+              /*if(isset($_POST['1']))
               {
-                  $answer1[]=array('1');
-              }
+                  $answer1[]='1');
+              }*/
 
               ?>
               
