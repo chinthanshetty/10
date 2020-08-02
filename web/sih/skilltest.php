@@ -178,15 +178,15 @@ while($row=mysqli_fetch_array($result)){
 <div class="col-md-2">
     
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="YES" >YES<br>
-        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
+        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="YES" >YES<br>
+        <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="NO" >NO<br>
         
       </div>
 </div>
 
 
       <?php
-      $yes=$_POST[$row['sktid']];
+      $yes=$_POST[$row['sktid'.'r']];
       if($yes=="YES")
       {
           $answer2[$row['sktid']]='1';
