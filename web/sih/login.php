@@ -1,4 +1,4 @@
-<?php include('server.php') ;
+<?php 
 include('config.php');
 session_start();
 if (isset($_POST['login_user'])) {
