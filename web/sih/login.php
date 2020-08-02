@@ -19,7 +19,7 @@ if (isset($_POST['login_user'])) {
   	$results = mysqli_query($con, $query);
   	if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
-      
+
       $_SESSION['success'] = "You are now logged in";
       
   	  header("location: profile.php");
@@ -154,7 +154,7 @@ if (isset($_POST['login_user'])) {
 
                 <div class="form-group">
 
-                  <label for="username">Username or Email</label>
+                  <label for="username">Username</label>
 
                   <input type="text" name="username" class="form-control" required>
                 </div>
