@@ -191,7 +191,7 @@ while($row=mysqli_fetch_array($result)){
       if($yes=="YES")
       {
           $answer2[$row['sktid']]='1';
-          echo $answer2[$row['sktid']];
+          //echo $answer2[$row['sktid']];
           
       }
 
@@ -207,11 +207,14 @@ while($row=mysqli_fetch_array($result)){
         if(isset($_POST['LEVEL2']))
         {
             $r1=0;
-            echo "hey";
+           // echo "hey";
                 
             
         }
+        print_r($answer1);
+        print_r($answer2);
         ?>
+        
         
     </div>
 </div>
