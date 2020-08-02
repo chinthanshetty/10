@@ -128,9 +128,11 @@ if(isset($_SESSION['username']))
       </div>
     </div>
   </nav>
+	<br><br><br>
 	<div class="container">
 		<h3>Jobs that matches your skills</h3>
 	</div>
+	<br><br>
   <section id="listings" class="py-4">
     <div class="container">
       <div class="row">
