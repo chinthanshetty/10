@@ -157,12 +157,9 @@ session_start();
         {
             $r1=0;
             echo "hey";
-            while($r=mysqli_fetch_array($answer1))
-            {
-                echo "hey";
-                echo $r[$r1];
-                $r1++;
-            }
+            print_r(array_values($answer1));
+                
+            
         }
         ?>
     </div>
