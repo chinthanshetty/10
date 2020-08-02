@@ -326,7 +326,7 @@ while($row=mysqli_fetch_array($query))
               
                   if(isset($_POST['skill'])){
                     $specialization= $_POST['specialization'];
-                    $topic= $_POST['topic'];
+                    $topic= $_POST['topics'];
                     $level= $_POST['level'];
                     
                     $spe=mysqli_query($db,"select sid from specialization where sname='$specialization'");
