@@ -1,13 +1,13 @@
-<?php include('server.php') ;
-include('otpset.php');
+<?php include('config.php') ;
+include('reg.php');
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $firstname= mysqli_real_escape_string($db, $_POST['firstname']);
+  $firstname= mysqli_real_escape_string($con, $_POST['firstname']);
   //$lastname= mysqli_real_escape_string($db, $_POST['lastname']);
-  $username = mysqli_real_escape_string($db, $_POST['username']);
-  $email = mysqli_real_escape_string($db, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+  $username = mysqli_real_escape_string($con, $_POST['username']);
+  $email = mysqli_real_escape_string($con, $_POST['email']);
+  $password_1 = mysqli_real_escape_string($con, $_POST['password_1']);
+  $password_2 = mysqli_real_escape_string($con, $_POST['password_2']);
 //  $usertype= mysqli_real_escape_string($db, $_POST['usertype']);
 
   // form validation: ensure that the form is correctly filled ...
@@ -22,7 +22,7 @@ if (isset($_POST['reg_user'])) {
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
   $user_check_query = "SELECT * FROM allusers WHERE username='$username' OR email='$email' LIMIT 1";
-  $result = mysqli_query($db, $user_check_query);
+  $result = mysqli_query($con, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { // if user exists
@@ -38,12 +38,14 @@ if (isset($_POST['reg_user'])) {
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
-	
-  	$query = "INSERT INTO allusers (firstname, username, email, password,usertype)  VALUES('$firstname', '$username', '$email', '$password','2')";
-  	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
+    $_SESSION['firstname']=$firstname;
+    $_SESSION['lastname']=$lastname;
+    $_SESSION['username']=$username;
+    $_SESSION['email']=$email;
+    $_SESSION['password']=$password;
+    $_SESSION['type']="2";
     $_SESSION['success'] = "You are now logged in";
-    include('otpset.php');
+    include('reg.php');
     $rndno=rand(100000, 999999);//OTP generate
     
     ini_set( 'display_errors', 1 );

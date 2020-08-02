@@ -150,7 +150,7 @@ $("#suggesstion-box").hide();
                 <div class="form-group">
                 <?php
                 $sql="SELECT * FROM allusers where uid=$loggedin_id";
-                $result=mysqli_query($db,$sql);
+                $result=mysqli_query($con,$sql);
                 ?>
                 <?php
                 while($rows=mysqli_fetch_array($result)){
@@ -236,7 +236,7 @@ $("#suggesstion-box").hide();
               <?php
               if(isset($_POST['jexp'])){
               $query3="INSERT INTO jobs (jname,uid,experience,discription) VALUES ('$jn','$loggedin_id','$dur','$jd')";
-              mysqli_query($db,$query3);
+              mysqli_query($con,$query3);
               if($sql>0){
                 //header("location:http://".$_SERVER['HTTP_HOsT'].dirname($_SERVER['PHP_SELF'])."/profile.php");
               }
@@ -269,7 +269,7 @@ $("#suggesstion-box").hide();
              
               
                 
-                $res2=mysqli_query($db,"select * from jobs where uid='$loggedin_id'");
+                $res2=mysqli_query($con,"select * from jobs where uid='$loggedin_id'");
                 while($r=mysqli_fetch_array($res2)){
                   
                   $e=$r['experience'];
@@ -403,40 +403,40 @@ while($row=mysqli_fetch_array($query))
                     $topic= $_POST['topics'];
                     $level= $_POST['level'];
 
-                    $jt=mysqli_query($db,"select jid from jobs where jname='$jnam'");
+                    $jt=mysqli_query($con,"select jid from jobs where jname='$jnam'");
                     $row4=mysqli_fetch_array($jt,MYSQLI_ASSOC);
                     $jtitle=$row4['jid'];
                     
                     
-                    $top=mysqli_query($db,"select tid from topics where topicName='$topic' and sid='$specialization'");
+                    $top=mysqli_query($con,"select tid from topics where topicName='$topic' and sid='$specialization'");
                     $row2=mysqli_fetch_array($top,MYSQLI_ASSOC);
                     $topi=$row2['tid'];
 
-                    $lev=mysqli_query($db,"select lid from level where lname='$level'");
+                    $lev=mysqli_query($con,"select lid from level where lname='$level'");
                     $row3=mysqli_fetch_array($lev,MYSQLI_ASSOC);
                     $leve=$row3['lid'];
                       
                     $query1="INSERT INTO jobdetails (jid,tid,lid) VALUES ('$jtitle','$topi','$leve')";
                     
-                    mysqli_query($db,$query1);
+                    mysqli_query($con,$query1);
                 }
-                $res=mysqli_query($db,"select * from jobs where uid='$loggedin_id'");
+                $res=mysqli_query($con,"select * from jobs where uid='$loggedin_id'");
                 while($r=mysqli_fetch_array($res)){
                   $j=$r['jid'];
                   $jobname=$r['jname'];
-                  $res2=mysqli_query($db,"select * from jobdetails where jid='$j'");
+                  $res2=mysqli_query($con,"select * from jobdetails where jid='$j'");
                  while( $ress2=mysqli_fetch_array($res2)){
                    $jdid=$ress2['jdid'];
                   $t=$ress2['tid'];
-                  $t1=mysqli_query($db,"select * from topics where tid='$t'");
+                  $t1=mysqli_query($con,"select * from topics where tid='$t'");
                   $r1=mysqli_fetch_array($t1,MYSQLI_ASSOC);
                   $t2=$r1['topicName'];
                   $s=$r1['sid'];
-                  $s1=mysqli_query($db,"select * from specialization where sid='$s'");
+                  $s1=mysqli_query($con,"select * from specialization where sid='$s'");
                   $r2=mysqli_fetch_array($s1,MYSQLI_ASSOC);
                   $s2=$r2['sname'];
                   $l=$ress2['lid'];
-                  $l1=mysqli_query($db,"select * from level where lid='$l'");
+                  $l1=mysqli_query($con,"select * from level where lid='$l'");
                   $r3=mysqli_fetch_array($l1,MYSQLI_ASSOC);
                   $l2=$r3['lname'];
                  // $skidd=mysqli_query($db,"select * from skills where  tid='$t'and lid='$l' and uid='$loggedin_id'");
