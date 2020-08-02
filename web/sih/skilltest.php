@@ -1,5 +1,6 @@
 <?php
 include('config.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -121,7 +122,30 @@ include('config.php');
         <div class="col-sm-2">
             <div class="form-check">
                 <label class="form-check-label1">
-                    <?php echo $row['sktid']; ?>
+                    <?php echo $row['question1']; ?>
+        </label>
+        </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
+                <label class="form-check-label" for="exampleRadios1">
+                  Yes
+                </label>
+              </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
+                <label class="form-check-label" for="exampleRadios1">
+                  No
+                </label>
+              </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="form-check">
+                <label class="form-check-label1">
+                    <?php echo $row['question2']; ?>
         </label>
         </div>
         </div>
