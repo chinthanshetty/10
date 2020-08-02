@@ -14,7 +14,7 @@ if (!empty($success)) {
 function getLevels() {
     require './db.php';
     $array = array();
-    $stmt = $pdo->prepare("SELECT specialization.sname,topics.topicName,question1,question2 from specialization,topics,skilltest where topics.sid=specialization.sid and topics.tid=skilltest.tid");
+    $stmt = $pdo->prepare("SELECT specialization.sname,topics.topicName,question1,question2,answer1,answer2 from specialization,topics,skilltest where topics.sid=specialization.sid and topics.tid=skilltest.tid");
     $stmt->execute();
     $i=0;
     while ($temp = $stmt->fetch(PDO::FETCH_ASSOC)) {
