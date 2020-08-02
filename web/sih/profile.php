@@ -2,9 +2,7 @@
 include('session_check.php');
 
 ?>
-<?php
-require_once("config.php");
-?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -248,7 +246,7 @@ $("#suggesstion-box").hide();
                    								<?php $query =mysqli_query($db,"SELECT * FROM specialization");
 while($row=mysqli_fetch_array($query))
 { ?>
-<option value="<?php echo $row['sid'];?>"><?php echo $row['sname'];?></option>
+<option value="<?php echo $row['sname'];?>"><?php echo $row['sname'];?></option>
 <?php
 }
 ?>

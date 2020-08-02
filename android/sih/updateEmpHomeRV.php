@@ -21,13 +21,13 @@ if (!empty($success)) {
 function updateHomeRV($userdetails) {
     require './db.php';
     $array = array();
-    $stmt = $pdo->prepare("SELECT allusers.firstname as Company_Name,matched.jobname as Job_Name,jobid2 as jobid,matched.jobdiscription as Job_Discription,(matched.skillsmatched/allmatches.totalskillsinthejob)*100 as Match_Percentage FROM
-    (SELECT j.jid as jobid2,j.jname as jobname,jd.jdid as jobidid,j.uid as companyid,j.discription as jobdiscription, count(*) as skillsmatched from jobs j,skills s, jobdetails jd, allusers u where u.uid=s.uid and u.username=:username and s.tid=jd.tid and jd.jid=j.jid group by j.jid) matched
-    JOIN
-    (SELECT jd.jid as jobid, count(*) as totalskillsinthejob from jobdetails jd group by jd.jid) allmatches
-    ON matched.jobid2=allmatches.jobid
-    JOIN allusers on allusers.uid=matched.companyid
-    ORDER BY Match_Percentage desc"); 
+    $stmt = $pdo->prepare("SELECT jobid,firstname as companyname,jname as jobname,discription as jobdiscription,experience,
+    location,match_percentage from (SELECT * from(SELECT t3.jobid as jobid,t3.sum/t4.total as match_percentage
+     from (select t1.jjid as jobid, sum(t1.cal) as sum from (SELECT j.jid as jjid,j.jdid as jdid ,j.lid as
+      jlid, s.lid as slid,  if(s.lid > j.lid, (s.lid-j.lid)*10+100,100-(j.lid-s.lid)*30) as cal from jobdetails j,
+       skills s,allusers au where j.tid = s.tid and s.uid = au.uid and au.username=:username) t1 group by t1.jjid)
+        t3 join (SELECT jd.jid as jjjid,COUNT(*) as total FROM jobdetails jd GROUP by jd.jid)t4 on t3.jobid=t4.jjjid)t5
+         join (SELECT * from jobs)t6 on t6.jid=t5.jobid) t7 join (SELECT firstname,uid from allusers)t8 on t7.uid=t8.uid"); 
     $stmt->execute($userdetails);
     $i=0;
     while ($temp = $stmt->fetch(PDO::FETCH_ASSOC)) {
