@@ -115,21 +115,7 @@ $("#suggesstion-box").hide();
 
             <a class="nav-link" href="home_company.php">Home</a>
           </li>
-          
-          
         </ul>
-        <ul class="navbar-nav ml-auto">
- 
-         <li class="nav-item mr-3">
- 
-           <a class="nav-link" href="logout.php">
- 
-             <i class="fas fa-user-plus"></i>Logout</a>
-          </li>
-          <span id="google_translate_element"> </span>
-        </ul>
-
-
         <ul class="navbar-nav ml-auto">
  
          <li class="nav-item mr-3">
@@ -138,7 +124,13 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-user-plus"></i> Account Settings</a>
           </li>
-          
+          <li class="nav-item mr-3">
+ 
+           <a class="nav-link" href="logout.php">
+ 
+             <i class="fas fa-user-plus"></i>Logout</a>
+          </li>
+          <span id="google_translate_element"> </span>
         </ul>
       </div>
     </div>
@@ -151,7 +143,7 @@ $("#suggesstion-box").hide();
 
       <div class="row">
 
-       <div class="col-lg-6 col-md-4">
+       <div class="col-lg-6 col-md-4 mx-auto">
 
           <div class="card">
 
