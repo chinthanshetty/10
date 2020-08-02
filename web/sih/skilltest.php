@@ -106,70 +106,7 @@ session_start();
                 <h3>Question is here</h3>
             
         </div>
-        <?php
-        include("session_check.php");
-        $result=($con,"select * from skilltest");
-        while($row=mysqli_fetch_array($result)){
-            $sktid[]=array($row['sktid']);
-            $tid[]=array($row['tid']);
-            $question1[]=array($row['question1']);
-            $question2[]=array($row['question2']);
-            $answer1[]=array($row['answer1']);
-            $answer2[]=array($row['answer2']);
         
-        
-        ?>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <label class="form-check-label1">
-                    <?php echo $row['question1']; ?>
-        </label>
-        </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  Yes
-                </label>
-              </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  No
-                </label>
-              </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <label class="form-check-label1">
-                    <?php echo $row['question2']; ?>
-        </label>
-        </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  Yes
-                </label>
-              </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="2" id="option1" value="option1" >
-                <label class="form-check-label" for="exampleRadios1">
-                  No
-                </label>
-              </div>
-        </div>
-        <?php
-        }
-        ?>
-    </div>
-</div>
     
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
