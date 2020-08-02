@@ -56,7 +56,6 @@ body {
 
 .centered img {
   width: 150px;
-  border-radius: 50%;
 }
 </style>
 </head>
