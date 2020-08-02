@@ -23,7 +23,7 @@ function changeProfilePic() {
 		list($txt, $ext) = explode(".", $name);
 		if(in_array($ext,$valid_formats)) {
 			if($size<(1024*1024)) {
-				$actual_image_name = $name .'.'.$ext;
+				$actual_image_name = $userId .'.'.$ext;
 				$filePath = $path .'/'.$actual_image_name;
 				$tmp = $_FILES['profile-pic']['tmp_name'];
 				if(move_uploaded_file($tmp, $filePath)) {

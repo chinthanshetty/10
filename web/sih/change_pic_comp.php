@@ -15,7 +15,7 @@ function changeProfilePic() {
 	$post = isset($_POST) ? $_POST: array();
 	$max_width = "500"; 
 	$userId = isset($post['hdn-profile-id']) ? intval($post['hdn-profile-id']) : 0;
-	$path = 'images/tmp';
+	$path = 'https://betterfuture.tech/android/sih/images';
 	$valid_formats = array("jpg", "png", "gif", "jpeg");
 	$name = $_FILES['profile-pic']['name'];
 	$size = $_FILES['profile-pic']['size'];
@@ -23,7 +23,7 @@ function changeProfilePic() {
 		list($txt, $ext) = explode(".", $name);
 		if(in_array($ext,$valid_formats)) {
 			if($size<(1024*1024)) {
-				$actual_image_name = $name .'.'.$ext;
+				$actual_image_name = $userId .'.'.$ext;
 				$filePath = $path .'/'.$actual_image_name;
 				$tmp = $_FILES['profile-pic']['tmp_name'];
 				if(move_uploaded_file($tmp, $filePath)) {

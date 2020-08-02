@@ -180,7 +180,7 @@ $("#suggesstion-box").hide();
 </p>
 
 
-              </div>
+        </div>
 
 
                 <?php
