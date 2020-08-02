@@ -65,13 +65,16 @@
 	</div>
     <button type="submit" class="btn btn-secondary btn-block" name="otpsub" >Submit</button>
   	<?php
-    include('otpset.php');
+    include('reg.php');
+    include('config.php');
         if(isset($_POST['otpsub'])){
                 $otp1=$_POST['OTP'];
                 echo $otp1;
                 
                 echo $otp2;
                 if($otp1==$otp2){
+                  $query = "INSERT INTO allusers (firstname, username, email, password,usertype)  VALUES('$firstname', '$username', '$email', '$password','$type')";
+  	              mysqli_query($con, $query);
                     header("location:login_company.php");
                 }
                 else{
