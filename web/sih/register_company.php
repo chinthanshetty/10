@@ -136,7 +136,7 @@ if (isset($_POST['reg_user'])) {
           <div class="card">
             <div class="card-header a text-white">
               <h4>
-                <i class="fas fa-user-plus"></i> Register</h4>
+                <i class="fas fa-user-plus"></i> Register Company</h4>
             </div>
             <div class="card-body">
 	
