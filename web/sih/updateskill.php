@@ -232,6 +232,7 @@ while($row=mysqli_fetch_array($result)){
         }
        // echo $answer1;
         ?>
+      </div>
         <input type="submit" value="SUBMIT" name="SUBMIT">
     </form>
          <?php
@@ -275,7 +276,7 @@ while($row=mysqli_fetch_array($result)){
        
         ?>
         
-      </div>
+    
 
 <!-- container -->
 </div>
