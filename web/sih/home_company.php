@@ -144,6 +144,7 @@ if(isset($_SESSION['username']))
           
       $home1=mysqli_query($con,$homie1);
       print_r($home1);
+      echo "checking";
       while($rw=mysqli_fetch_array($home1)){
         ?>
 
