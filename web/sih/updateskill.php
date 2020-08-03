@@ -143,8 +143,8 @@ session_start();
               </div>
         </div>
        
-      </div>
-    </div>
+     
+    
               <?php
               $yes=$_POST[$row['sktid']];
               if($yes=="YES")
@@ -181,6 +181,7 @@ $result=mysqli_query($con,"select * from skilltest");
 while($row=mysqli_fetch_array($result)){
    
 ?>
+</div>
 <div class="col-md-8">
  
             <?php echo $row['question2']; ?>
