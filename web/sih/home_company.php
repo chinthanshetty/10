@@ -170,7 +170,7 @@ if(isset($_SESSION['username']))
                   <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
               </div>
               <hr>
-              <a href="listing.html" class="btn btn-primary btn-block">Apply Now</a>
+              <a href="listing.html" class="btn btn-primary btn-block">Contact</a>
             </div>
           </div>
         </div>
