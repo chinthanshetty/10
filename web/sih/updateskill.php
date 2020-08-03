@@ -228,7 +228,7 @@ while($row=mysqli_fetch_array($result)){
                       echo "hey";
                       $r1=$r+1;
                       $query=mysqli_query($con,"select * from skilltest where sktid='$r1'");
-                      $res=mysqli_fetch_array($query,MYSQL_ASSOC);
+                      $res=mysqli_fetch_array($query,MYSQLI_ASSOC);
                       $ress=$res['tid'];
                       echo $ress;
                       //echo $query;
