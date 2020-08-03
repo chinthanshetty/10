@@ -15,14 +15,16 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	$password = md5($password);
-  	$query = "SELECT * FROM allusers WHERE( username='$username' OR email='$username') AND password='$password'";
+  	$query = "SELECT * FROM allusers WHERE( username='$username' OR email='$username') AND password='$password' AND usertype='1'";
   	$results = mysqli_query($con, $query);
   	if (mysqli_num_rows($results) == 1) {
+     
       $_SESSION['username'] = $username;
       
       $_SESSION['success'] = "You are now logged in";
       
-  	  header("location: profile.php");
+      header("location: profile.php");
+     
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}

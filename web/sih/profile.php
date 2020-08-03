@@ -130,6 +130,12 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-user-plus"></i> Account Settings</a>
           </li>
+          <li class="nav-item mr-3">
+ 
+           <a class="nav-link" href="updateskill.php">
+ 
+             <i class="fas fa-user-plus"></i> SKILL TEST</a>
+          </li>
           
 		 <li class="nav-item mr-3">
  
@@ -329,6 +335,7 @@ while($row=mysqli_fetch_array($query))
                 <i class="fas fa-user"></i> My Skills</h4>
             </div>
             <div class="card-body">
+            <div style="overflow-x:auto;">
               <table class="table table-striped">
 
                 <thead>
@@ -401,7 +408,7 @@ while($row=mysqli_fetch_array($query))
   
             
                 </tbody>
-              </table>
+              </table></div>
             </div>
           </div>
         </div>
