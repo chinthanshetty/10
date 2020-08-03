@@ -253,6 +253,7 @@ while($row=mysqli_fetch_array($result)){
             }
           }*/
           $count=count($answer1);
+          echo "You are good at:";
           while($count!=$r)
           {
               if($answer1[$r]==$answer2[$r])
@@ -269,7 +270,7 @@ while($row=mysqli_fetch_array($result)){
                       $query2=mysqli_query($con,"select * from topics where tid='$ress'");
                       $res2=mysqli_fetch_array($query2,MYSQLI_ASSOC);
                       $ress2=$res2['topicName'];
-                      echo "<br>". "You are good at ".$ress2; 
+                      echo "<br>".$ress2; 
                   }
               }
               $r++;
