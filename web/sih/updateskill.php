@@ -154,7 +154,7 @@ session_start();
         
     
          <?php
-        if(isset($_POST['LEVEL1']))
+        if(isset($_POST['SUBMIT']))
         {
             $r1=0;
             
@@ -203,14 +203,14 @@ while($row=mysqli_fetch_array($result)){
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="LEVEL1" name="LEVEL1">
+        <input type="submit" value="SUBMIT" name="SUBMIT">
     </form>
          <?php
-        if(isset($_POST['LEVEL1']))
+        if(isset($_POST['SUBMIT']))
         {
           $r=0;
-          print_r($answer1);
-          print_r($answer2);
+        //  print_r($answer1);
+          //print_r($answer2);
           /*foreach(array_combine($answer1,$answer2) as $a1 => $a2){
             if($a1==$a2){
                 if($a1==1){
@@ -235,7 +235,7 @@ while($row=mysqli_fetch_array($result)){
                       $query2=mysqli_query($con,"select * from topics where tid='$ress'");
                       $res2=mysqli_fetch_array($query2,MYSQLI_ASSOC);
                       $ress2=$res2['topicName'];
-                      echo 'You are good at '.$ress2;
+                      echo "<br>". "You are good at ".$ress2; 
                   }
               }
               $r++;

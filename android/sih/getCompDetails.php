@@ -5,7 +5,7 @@ if(isset($_POST['username'])){
 
 $response = array();
 $skilldetails = array(
-    'username' => $username,
+    'username' => $username
 );
 $success = getSkills($skilldetails);
 if (!empty($success)) {
