@@ -212,7 +212,7 @@ while($row=mysqli_fetch_array($result)){
           print_r($answer1);
           print_r($answer2);
           foreach(array_combine($answer1,$answer2) as $a1 => $a2){
-            if($a1==1&&$a2==1){
+            if($a1==1 and $a2==1){
               echo "hey";
             }
           }
