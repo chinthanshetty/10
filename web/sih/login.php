@@ -18,11 +18,16 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM allusers WHERE( username='$username' OR email='$username') AND password='$password'";
   	$results = mysqli_query($con, $query);
   	if (mysqli_num_rows($results) == 1) {
+      if($results['usertype']=='1'){
       $_SESSION['username'] = $username;
       
       $_SESSION['success'] = "You are now logged in";
       
-  	  header("location: profile.php");
+      header("location: profile.php");
+      }
+      else {
+        array_push($errors,"You are not an Employee! Try to login choosing company")
+      }
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
