@@ -37,13 +37,13 @@ function changeProfilePic() {
 						$scale = 1;
 						$uploaded = resizeImage($filePath,$width,$height,$scale, $ext);
 					}
-					include_once("server.php");
+					include_once("config.php");
 					include("session_check.php");
 
 					$data_insert = " INSERT INTO allusers (imagelocation) VALUES ('$uploaded') WHERE uid='$loggedin_id'";
-					mysqli_query($db, $data_insert);
+					mysqli_query($con, $data_insert);
 					$data_in="UPDATE allusers SET imagelocation='$uploaded' WHERE uid='$loggedin_id'";
-                    mysqli_query($db,$data_in);					
+                    mysqli_query($con,$data_in);					
 					//echo "<img id='photo' file-name='".$actual_image_name."' class='' src='".$filePath.'?'.time()."' class='preview'/>";
 					header("location:profile_company.php");
 				}

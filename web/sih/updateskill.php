@@ -252,6 +252,7 @@ while($row=mysqli_fetch_array($result)){
             }
             }
           }*/
+          
           $count=count($answer1);
           echo "You are good at:";
           while($count!=$r)
