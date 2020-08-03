@@ -194,7 +194,7 @@ while($row=mysqli_fetch_array($result)){
 
 <!-- container -->
 
-</div>
+
 
 <br><br><br>
 <!-- part 2 -->
@@ -233,6 +233,7 @@ while($row=mysqli_fetch_array($result)){
        // echo $answer1;
         ?>
       </div>
+    </div>
         <input type="submit" value="SUBMIT" name="SUBMIT">
     </form>
          <?php
@@ -279,7 +280,7 @@ while($row=mysqli_fetch_array($result)){
     
 
 <!-- container -->
-</div>
+
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
 
