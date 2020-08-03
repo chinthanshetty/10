@@ -26,7 +26,7 @@ if (isset($_POST['login_user'])) {
       header("location: profile.php");
       }
       else {
-        array_push($errors,"You are not an Employee! Try to login choosing company")
+        array_push($errors,"You are not an Employee! Try to login choosing company");
       }
   	}else {
   		array_push($errors, "Wrong username/password combination");
