@@ -23,8 +23,7 @@ function getSkills($skilldetails) {
     require './db.php';
     $array = array();
     $stmt = $pdo->prepare("SELECT topics.topicName,specialization.sname,
-     level.lname from jobdetails,topics,specialization,level where jobdetails.jid=
-     :username and jobdetails.tid=topics.tid and topics.sid=specialization.sid and jobdetails.lid= level.lname");
+    level.lname from jobdetails,topics,specialization,level where jobdetails.jid=:username and jobdetails.tid=topics.tid and topics.sid=specialization.sid and jobdetails.lid= level.lid");
     $stmt->execute($skilldetails);
     $i=0;
     while ($temp = $stmt->fetch(PDO::FETCH_ASSOC)) {
