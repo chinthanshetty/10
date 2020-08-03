@@ -218,7 +218,8 @@ while($row=mysqli_fetch_array($result)){
             }
             }
           }*/
-          while(count($answer1))
+          $count=count($answer1);
+          while($count!=$r)
           {
               if($answer1[$r]==$answer2[$r])
               {
@@ -227,6 +228,7 @@ while($row=mysqli_fetch_array($result)){
                       echo "hey";
                   }
               }
+              $r++;
           }
                 
             
