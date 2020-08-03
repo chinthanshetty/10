@@ -109,9 +109,9 @@ session_start();
           </div>
       </div>
       <br>
-      
+      <br>
 <div class="container">
-    <div class="row">
+    
 
         <?php
         include("session_check.php");
@@ -190,7 +190,7 @@ while($row=mysqli_fetch_array($result)){
    
 ?>
 </div>
-
+<div class="container">
 
 
 
@@ -282,7 +282,6 @@ while($row=mysqli_fetch_array($result)){
         <br>
       </div>
     </div>
-  </div>
     <br><br><br>
 <!-- container -->
 
