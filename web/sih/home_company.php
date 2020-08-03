@@ -140,7 +140,7 @@ if(isset($_SESSION['username']))
           au.lastname as lastname, au.discription as empdiscription,s.tid as ttid from allusers au,skills s where au.uid=s.uid)t2
            on t2.ttid=t1.ttid1 group by jjid,empusername)aa join (SELECT jd.jid as bbjid, COUNT(*) as total from jobdetails 
            jd GROUP by jd.jid)bb on aa.jjid=bb.bbjid having match_percentage>=50 order by match_percentage desc";
-      $home1=mysqli_query($db,$homie1);
+      $home1=mysqli_query($con,$homie1);
       while($rw=mysqli_fetch_array($home1)){
         ?>
 
