@@ -209,8 +209,8 @@ while($row=mysqli_fetch_array($result)){
         if(isset($_POST['LEVEL1']))
         {
           $r=0;
-          print_r($answer1);
-          print_r($answer2);
+        //  print_r($answer1);
+          //print_r($answer2);
           /*foreach(array_combine($answer1,$answer2) as $a1 => $a2){
             if($a1==$a2){
                 if($a1==1){
