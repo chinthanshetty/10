@@ -154,7 +154,13 @@ if(isset($_SESSION['username']))
       
 
        while($rw=mysqli_fetch_array($home)){
-        
+         $r1=mysqli_query($con,"select * from jobs where jid='$rw['jobid']");
+         $sql1=mysqli_fetch_array($r1,MYSQLI_ASSOC);
+         $r2=$sql1['uid'];
+         $r3=mysqli_query($con,"select * from allusers where uid='$r2'");
+         $sql2=mysqli_fetch_array($r3,MYSQLI_ASSOC);
+        $email=$sql2['email'];
+        echo $email;
          ?>
  
 
