@@ -235,7 +235,7 @@ while($row=mysqli_fetch_array($result)){
        // echo $answer1;
         ?>
         <br><br>
-        <input type="submit" class="btn btn-block" value="SUBMIT" name="SUBMIT">
+        <input type="submit" class="btn al btn-block" value="SUBMIT" name="SUBMIT">
         <br><br><br>
     </form>
          <?php
