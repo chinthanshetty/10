@@ -111,7 +111,7 @@ session_start();
       <br>
       
 <div class="container">
-  <div class="row">
+    <div class="row">
 
         <?php
         include("session_check.php");
@@ -129,7 +129,7 @@ session_start();
             $answer2[]=$row['answer2'];
            
         ?>
-        <div class="row">
+        
         <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
@@ -279,7 +279,7 @@ while($row=mysqli_fetch_array($result)){
         
       </div>
     </div>
-  </div>
+<
 <!-- container -->
 
 
