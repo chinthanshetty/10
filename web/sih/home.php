@@ -154,7 +154,7 @@ if(isset($_SESSION['username']))
        print_r($home);
 
        while($rw=mysqli_fetch_array($home)){
-         echo "hey";
+        
          ?>
  
 
