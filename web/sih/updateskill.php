@@ -226,10 +226,11 @@ while($row=mysqli_fetch_array($result)){
                   if($answer1[$r]==1)
                   {
                       echo "hey";
-                      $query=mysqli_query("select tid from skilltest where sktid='$r'");
-                     // $res=mysqli_fetch_array($query,mYSQL_ASSOC);
-                      //$ress=$res['tid'];
-                      echo $query;
+                      $query=mysqli_query($con,"select tid from skilltest where sktid='$r+1'");
+                      $res=mysqli_fetch_array($query,mYSQL_ASSOC);
+                      $ress=$res['tid'];
+                      echo $ress;
+                      //echo $query;
                   }
               }
               $r++;
