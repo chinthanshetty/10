@@ -205,6 +205,11 @@ while($row=mysqli_fetch_array($result)){
     
     <div class="form-check">
         <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="YES" >YES<br>
+      </div>
+    </div>
+        <div class="col-md-2">
+    
+          <div class="form-check">
         <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="NO" >NO<br>
         
       </div>
@@ -273,10 +278,9 @@ while($row=mysqli_fetch_array($result)){
         
       </div>
     </div>
-</div>
-</div>
+<
 <!-- container -->
-</div>
+
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
 
