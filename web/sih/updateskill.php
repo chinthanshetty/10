@@ -109,9 +109,9 @@ session_start();
           </div>
       </div>
       <br>
-
+      
 <div class="container">
-    
+    <div class="row">
 
         <?php
         include("session_check.php");
@@ -129,7 +129,6 @@ session_start();
             $answer2[]=$row['answer2'];
            
         ?>
-        <div class="row">
         <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
@@ -189,14 +188,11 @@ $result=mysqli_query($con,"select * from skilltest");
 while($row=mysqli_fetch_array($result)){
    
 ?>
-<br>
 </div>
 
-<!-- container -->
 
 
 
-<br><br><br>
 <!-- part 2 -->
 <div class="row">
 <div class="col-md-8">
@@ -232,8 +228,6 @@ while($row=mysqli_fetch_array($result)){
         }
        // echo $answer1;
         ?>
-      </div>
-    </div>
         <input type="submit" value="SUBMIT" name="SUBMIT">
     </form>
          <?php
@@ -277,10 +271,12 @@ while($row=mysqli_fetch_array($result)){
        
         ?>
         
-    
-
+      </div>
+    </div>
+</div>
+</div>
 <!-- container -->
-
+</div>
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
 
