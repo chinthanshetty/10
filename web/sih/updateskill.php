@@ -229,6 +229,7 @@ while($row=mysqli_fetch_array($result)){
                       $query=mysqli_query($con,"select tid from skilltest where sktid='$r+1'");
                       $res=mysqli_fetch_array($query,mYSQL_ASSOC);
                       $ress=$res['tid'];
+                      echo $ress;
                       //echo $query;
                   }
               }
