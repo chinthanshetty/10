@@ -132,6 +132,7 @@ if(isset($_SESSION['username']))
 
       <?php
       include('session_check.php');
+      include('config.php');
       $homie1="SELECT jjid as jobid,jname as jobname,empusername,firstname,lastname,empdiscription,some/total as match_percentage
       from (SELECT *,sum(cal) as some from (SELECT j.jid as jjid,jj.jname,j.jdid as jdid ,j.lid as jlid,
        s.lid as slid,au.uid as uuid,s.tid as ttid1,  if(s.lid > j.lid, (s.lid-j.lid)*10+100,100-(j.lid-s.lid)*30)
@@ -140,7 +141,9 @@ if(isset($_SESSION['username']))
           au.lastname as lastname, au.discription as empdiscription,s.tid as ttid from allusers au,skills s where au.uid=s.uid)t2
            on t2.ttid=t1.ttid1 group by jjid,empusername)aa join (SELECT jd.jid as bbjid, COUNT(*) as total from jobdetails 
            jd GROUP by jd.jid)bb on aa.jjid=bb.bbjid having match_percentage>=50 order by match_percentage desc";
+          
       $home1=mysqli_query($con,$homie1);
+      print_r($home1);
       while($rw=mysqli_fetch_array($home1)){
         ?>
 
