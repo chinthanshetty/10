@@ -206,7 +206,7 @@ while($row=mysqli_fetch_array($result)){
         <input type="submit" value="LEVEL1" name="LEVEL1">
     </form>
          <?php
-        /*if(isset($_POST['LEVEL1']))
+        if(isset($_POST['LEVEL1']))
         {
           $r=0;
           print_r($answer1);
@@ -218,7 +218,7 @@ while($row=mysqli_fetch_array($result)){
           }
                 
             
-        }*/
+        }
        
         ?>
         
