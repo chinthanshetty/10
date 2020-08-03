@@ -134,7 +134,7 @@ $("#suggesstion-box").hide();
  
            <a class="nav-link" href="updateskill.php">
  
-             <i class="fas fa-user-plus"></i> SKILL YEST</a>
+             <i class="fas fa-user-plus"></i> SKILL TEST</a>
           </li>
           
 		 <li class="nav-item mr-3">
