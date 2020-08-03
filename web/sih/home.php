@@ -154,13 +154,14 @@ if(isset($_SESSION['username']))
       
 
        while($rw=mysqli_fetch_array($home)){
-         $r1=mysqli_query($con,"select * from jobs where jid='$rw['jobid']");
+         $jobb=$rw['jobid'];
+         $r1=mysqli_query($con,"select * from jobs where jid='$jobb'");
          $sql1=mysqli_fetch_array($r1,MYSQLI_ASSOC);
          $r2=$sql1['uid'];
          $r3=mysqli_query($con,"select * from allusers where uid='$r2'");
          $sql2=mysqli_fetch_array($r3,MYSQLI_ASSOC);
         $email=$sql2['email'];
-        echo $email;
+        //echo $email;
          ?>
  
 
@@ -218,7 +219,7 @@ if(isset($_SESSION['username']))
                   <i class="fas fa-th-large"></i> Description: <?php echo $rw['jobdiscription'];?> </div>
               </div>
               <hr>
-              <a href="listing.html" class="btn btn-primary btn-block">Apply Now</a>
+              <a href="mailto:$email" class="btn btn-primary btn-block">Apply Now</a>
             </div>
           </div>
         </div>
