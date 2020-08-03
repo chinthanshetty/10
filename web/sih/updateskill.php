@@ -235,7 +235,7 @@ while($row=mysqli_fetch_array($result)){
                       $query2=mysqli_query($con,"select * from topics where tid='$ress'");
                       $res2=mysqli_fetch_array($query2,MYSQLI_ASSOC);
                       $ress2=$res2['topicName'];
-                      echo 'You are good at '.$ress2; 
+                      echo  "You are good at ".$ress2."<br>"; 
                   }
               }
               $r++;
