@@ -37,7 +37,7 @@ function changeProfilePic() {
 						$scale = 1;
 						$uploaded = resizeImage($filePath,$width,$height,$scale, $ext);
 					}
-					include_once("server.php");
+					include_once("config.php");
 					include("session_check.php");
 
 					$data_insert = " INSERT INTO allusers (imagelocation) VALUES ('$uploaded') WHERE uid='$loggedin_id'";
