@@ -204,9 +204,7 @@ if(isset($_SESSION['username']))
                   ?> 
                   </div>
               </div>
-              </div>
-            </div>
-          </div>
+              
               <hr>
 
               <div class="row py-2 text-secondary">
@@ -218,6 +216,9 @@ if(isset($_SESSION['username']))
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
        <?php
       }
