@@ -215,7 +215,7 @@ while($row=mysqli_fetch_array($result)){
         
       </div>
 </div>
-
+</div>
 
       <?php
 
@@ -280,7 +280,7 @@ while($row=mysqli_fetch_array($result)){
        
         ?>
         <br>
-      </div>
+     
     </div>
     <br><br><br>
 <!-- container -->
