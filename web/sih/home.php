@@ -151,8 +151,10 @@ if(isset($_SESSION['username']))
             having match_percentage>=50 order by match_percentage desc";
             
        $home=mysqli_query($con,$homie);
-       echo "checking";
+       print_r($home);
+
        while($rw=mysqli_fetch_array($home)){
+         echo "hey";
          ?>
  
 
