@@ -211,12 +211,22 @@ while($row=mysqli_fetch_array($result)){
           $r=0;
           print_r($answer1);
           print_r($answer2);
-          foreach(array_combine($answer1,$answer2) as $a1 => $a2){
+          /*foreach(array_combine($answer1,$answer2) as $a1 => $a2){
             if($a1==$a2){
                 if($a1==1){
               echo $a1;
             }
             }
+          }*/
+          while(count($answer1))
+          {
+              if($answer1[$r]==$answer2[$r])
+              {
+                  if($answer1[$r]==1)
+                  {
+                      echo "hey";
+                  }
+              }
           }
                 
             
