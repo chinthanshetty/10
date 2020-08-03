@@ -187,6 +187,9 @@ if(isset($_SESSION['username']))
                     $rw['match_percentage']=100;
                   echo $rw['match_percentage']." and you possess extra skills";
                   }
+                  else{
+                    echo $rw['match_percentage'];
+                  }
                   ?> 
                   </div>
               </div>
