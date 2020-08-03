@@ -219,7 +219,7 @@ if(isset($_SESSION['username']))
                   <i class="fas fa-th-large"></i> Description: <?php echo $rw['jobdiscription'];?> </div>
               </div>
               <hr>
-              <a href="mailto:'$email'" class="btn btn-primary btn-block">Apply Now</a>
+              <a href="mailto:<?php echo $email; ?>" class="btn btn-primary btn-block">Apply Now</a>
             </div>
           </div>
         </div>
