@@ -110,7 +110,7 @@ session_start();
       </div>
       <br>
 <div class="container">
-    <div class="row">
+    
 
         <?php
         include("session_check.php");
@@ -128,6 +128,7 @@ session_start();
             $answer2[]=$row['answer2'];
            
         ?>
+        <div class="row">
         <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
@@ -138,6 +139,12 @@ session_start();
             
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="YES" >YES<br>
+            </div>
+        </div>
+        <div class="col-md-2">
+            
+          <div class="form-check">
+
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
                 
               </div>
@@ -182,6 +189,11 @@ while($row=mysqli_fetch_array($result)){
    
 ?>
 </div>
+
+
+
+
+<!-- part 2 -->
 <div class="row">
 <div class="col-md-8">
  
