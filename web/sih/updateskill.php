@@ -154,7 +154,7 @@ session_start();
         
     
          <?php
-        if(isset($_POST['LEVEL1']))
+        if(isset($_POST['SUBMIT']))
         {
             $r1=0;
             
@@ -203,10 +203,10 @@ while($row=mysqli_fetch_array($result)){
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="LEVEL1" name="LEVEL1">
+        <input type="submit" value="SUBMIT" name="SUBMIT">
     </form>
          <?php
-        if(isset($_POST['LEVEL1']))
+        if(isset($_POST['SUBMIT']))
         {
           $r=0;
         //  print_r($answer1);
