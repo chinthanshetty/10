@@ -159,9 +159,9 @@ if(isset($_SESSION['username']))
               <hr>
               <div class="row py-2 text-secondary">
                 <div class="col-6">
-                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['firstname'];?> </div>
+                  <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
                 <div class="col-6">
-                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['lastname'];?> </div>
+                  <i class="fas fa-car"></i>  description :<?php echo $rw['empdescription'];?> </div>
               </div>
            
 <div class="row py-2 text-secondary">
