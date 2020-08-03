@@ -110,7 +110,7 @@ session_start();
       </div>
       <br>
 <div class="container">
-    <div class="row">
+    
 
         <?php
         include("session_check.php");
@@ -128,6 +128,7 @@ session_start();
             $answer2[]=$row['answer2'];
            
         ?>
+        <div class="row">
         <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
