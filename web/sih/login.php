@@ -111,7 +111,7 @@ if (isset($_POST['login_user'])) {
 
           <li class="nav-item mr-3">
 
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">Back</a>
           </li>
           
           

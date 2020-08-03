@@ -129,10 +129,7 @@ if(isset($_SESSION['username']))
     </div>
   </nav>
 	<br><br><br>
-	<div class="container">
-		<h3>Jobs that matches your skills</h3>
-	</div>
-	<br><br>
+
   <section id="listings" class="py-4">
     <div class="container">
       <div class="row">
@@ -173,14 +170,14 @@ if(isset($_SESSION['username']))
               </div>
               <hr>
               <div class="row py-2 text-secondary">
-                <div class="col-6">
+                <div class="col-12">
                   <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
                
               </div>
 		     <div class="row py-2 text-secondary">
                
                 <div class="col-12">
-                  <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
+                  <i class="fas fa-car"></i>  Skill match :<?php echo round($rw['match_percentage']);?> </div>
               </div>
            
               <hr>

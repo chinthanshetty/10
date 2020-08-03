@@ -1,6 +1,6 @@
 <?php
 $response = array();
-$success = getLevels();
+$success = getQuestions();
 if (!empty($success)) {
     $response['success'] = "1";
     $response['message'] = "found!";
@@ -9,9 +9,10 @@ if (!empty($success)) {
 } else {
     $response['success'] = "0";
     $response['message'] = "not found. Please try again!";
+    $response['details'] = $success;
     echo json_encode($response);
 }
-function getLevels() {
+function getQuestions() {
     require './db.php';
     $array = array();
     $stmt = $pdo->prepare("SELECT specialization.sname,topics.topicName,question1,question2,answer1,answer2 from specialization,topics,skilltest where topics.sid=specialization.sid and topics.tid=skilltest.tid");

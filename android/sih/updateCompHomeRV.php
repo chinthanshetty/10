@@ -28,7 +28,7 @@ function updateHomeRV($userdetails) {
         and au.username=:username group by jdid)t1 join (select au.username as empusername,au.firstname as firstname,
          au.lastname as lastname, au.discription as empdiscription,s.tid as ttid from allusers au,skills s where au.uid=s.uid)t2
           on t2.ttid=t1.ttid1 group by jjid,empusername)aa join (SELECT jd.jid as bbjid, COUNT(*) as total from jobdetails 
-          jd GROUP by jd.jid)bb on aa.jjid=bb.bbjid"); 
+          jd GROUP by jd.jid)bb on aa.jjid=bb.bbjid having match_percentage>=50 order by match_percentage desc"); 
     $stmt->execute($userdetails);
     $i=0;
     while ($temp = $stmt->fetch(PDO::FETCH_ASSOC)) {
