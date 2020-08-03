@@ -130,6 +130,12 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-user-plus"></i> Account Settings</a>
           </li>
+          <li class="nav-item mr-3">
+ 
+           <a class="nav-link" href="updateskill.php">
+ 
+             <i class="fas fa-user-plus"></i> SKILL TEST</a>
+          </li>
           
 		 <li class="nav-item mr-3">
  
