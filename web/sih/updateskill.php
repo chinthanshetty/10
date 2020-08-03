@@ -97,16 +97,7 @@ session_start();
             </ul>
     
     
-            <!-- <ul class="navbar-nav ml-auto">
-     
-             <li class="nav-item mr-3">
-     
-               <a class="nav-link" href="">
-     
-                 <i class="fas fa-user-plus"></i></a>
-              </li>
-              
-            </ul> -->
+
           </div>
         </div>
       </nav>
@@ -152,7 +143,8 @@ session_start();
               </div>
         </div>
        
-        
+      </div>
+    </div>
               <?php
               $yes=$_POST[$row['sktid']];
               if($yes=="YES")
@@ -164,7 +156,7 @@ session_start();
 
               ?>
               
-        </div>
+       
         <?php
         
         }
@@ -265,7 +257,7 @@ while($row=mysqli_fetch_array($result)){
        
         ?>
         
-        
+      </div>
     </div>
 </div>
 </div>
