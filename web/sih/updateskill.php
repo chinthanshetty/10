@@ -109,6 +109,10 @@ session_start();
           </div>
       </div>
       <br>
+
+
+
+
 <div class="container">
     <div class="row">
 
@@ -189,9 +193,9 @@ while($row=mysqli_fetch_array($result)){
 ?>
 </div>
 
+<!-- container -->
 
-
-
+</div>
 <!-- part 2 -->
 <div class="row">
 <div class="col-md-8">
