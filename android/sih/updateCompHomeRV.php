@@ -23,7 +23,7 @@ function updateHomeRV($userdetails) {
     $array = array();
     $stmt = $pdo->prepare("SELECT *,cal/total as match_percentage from (SELECT *,
     sum(if(slid > jlid, (slid-jlid)*10+100,100-(jlid-slid)*30)) as cal from 
-    (SELECT j.jid as jobid,jd.jdid,j.jname, jd.tid,jd.lid as jlid from jobs j,
+    (SELECT j.jid as jobid,jd.jdid,j.jname as jobname, jd.tid,jd.lid as jlid from jobs j,
      jobdetails jd,allusers au where j.jid=jd.jid and j.uid=au.uid and au.username=:username)t1 join
       (SELECT au.username,au.firstname,au.lastname,au.discription as empdiscription,au.email as
        empemail,s.lid as slid,s.tid as tid2 from allusers au,skills s where au.uid=s.uid )t2 on
