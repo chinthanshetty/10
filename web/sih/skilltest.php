@@ -37,7 +37,26 @@ session_start();
     <link rel="stylesheet" href="acss/slicknav.css">
 
     <link rel="stylesheet" href="acss/style.css">
-  
+    <style>body{
+    background-color: #F8F9FA;
+  }
+
+ 
+
+  .co{
+    text-decoration: none;
+    color: white;
+  }
+  .a{
+    background-color: #28bcff;
+  }
+  .a:hover{
+    background-color: #2196f3;
+  }
+  .al{
+    background-color: #2196f3;
+  }
+  </style>
   <title>Better Career</title>
 </head>
 <body>
@@ -151,15 +170,11 @@ session_start();
         }
        // echo $answer1;
         ?>
-        
-    
+
          <?php
         if(isset($_POST['LEVEL1']))
         {
-            $r1=0;
-            
-                
-            
+            $r1=0;   
         }
         ?>
         <?php

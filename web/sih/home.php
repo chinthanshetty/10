@@ -140,22 +140,34 @@ if(isset($_SESSION['username']))
 
        <?php
        include('session_check.php');
+       include('config.php');
        $homie="SELECT jobid,firstname as companyname,jname as jobname,discription as jobdiscription,experience,
        location,match_percentage from (SELECT * from(SELECT t3.jobid as jobid,t3.sum/t4.total as match_percentage
         from (select t1.jjid as jobid, sum(t1.cal) as sum from (SELECT j.jid as jjid,j.jdid as jdid ,j.lid as
          jlid, s.lid as slid,  if(s.lid > j.lid, (s.lid-j.lid)*10+100,100-(j.lid-s.lid)*30) as cal from jobdetails j,
-          skills s,allusers au where j.tid = s.tid and s.uid = au.uid and au.username=username) t1 group by t1.jjid)
+          skills s,allusers au where j.tid = s.tid and s.uid = au.uid and au.username='$loggedin_session') t1 group by t1.jjid)
            t3 join (SELECT jd.jid as jjjid,COUNT(*) as total FROM jobdetails jd GROUP by jd.jid)t4 on t3.jobid=t4.jjjid)t5
-            join (SELECT * from jobs)t6 on t6.jid=t5.jobid) t7 join (SELECT firstname,uid from allusers)t8 on t7.uid=t8.uid";
+            join (SELECT * from jobs)t6 on t6.jid=t5.jobid) t7 join (SELECT firstname,uid from allusers)t8 on t7.uid=t8.uid 
+            having match_percentage>=50 order by match_percentage desc";
             
        $home=mysqli_query($con,$homie);
+      
+
        while($rw=mysqli_fetch_array($home)){
+         $jobb=$rw['jobid'];
+         $r1=mysqli_query($con,"select * from jobs where jid='$jobb'");
+         $sql1=mysqli_fetch_array($r1,MYSQLI_ASSOC);
+         $r2=$sql1['uid'];
+         $r3=mysqli_query($con,"select * from allusers where uid='$r2'");
+         $sql2=mysqli_fetch_array($r3,MYSQLI_ASSOC);
+        $email=$sql2['email'];
+        echo $email;
          ?>
  
 
 
  <!-- <div style="clear:both">
-         <p><?php echo $rw['companyname'].'-'.$rw['jobname'].'-'.$rw['jobdiscription'].'-'.$rw['match_percentage'];?></p><br>
+         </p><br>
          </div> -->
   <!-- Listing 1 -->
   <div class="col-md-6 col-lg-4 mb-4">
@@ -174,12 +186,32 @@ if(isset($_SESSION['username']))
                   <i class="fas fa-th-large"></i> Skill: <?php echo $rw['jobname'];?> </div>
                
               </div>
+              
+
 		     <div class="row py-2 text-secondary">
+         <div class="col-12">
+                  <i class="fas fa-th-large"></i>Location: <?php echo $rw['location'];?> </div>
                
-                <div class="col-12">
-                  <i class="fas fa-car"></i>  Skill match :<?php echo round($rw['match_percentage']);?> </div>
               </div>
-           
+              <div class="row py-2 text-secondary">
+              <div class="col-12">
+                  <i class="fas fa-th-large"></i>Experience: <?php echo $rw['experience']." years";?> </div>
+               
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-12">
+                  <i class="fas fa-car"></i>  Skill match :<?php 
+                  if($rw['match_percentage']>100){
+                    $rw['match_percentage']=100;
+                  echo $rw['match_percentage']." and you possess extra skills";
+                  }
+                  else{
+                    echo $rw['match_percentage'];
+                  }
+                  ?> 
+                  </div>
+              </div>
+              
               <hr>
 
               <div class="row py-2 text-secondary">
@@ -191,6 +223,9 @@ if(isset($_SESSION['username']))
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
        <?php
       }

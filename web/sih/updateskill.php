@@ -35,7 +35,26 @@ session_start();
     <link rel="stylesheet" href="acss/gijgo.css">
     <link rel="stylesheet" href="acss/animate.min.css">
     <link rel="stylesheet" href="acss/slicknav.css">
+    <style>body{
+    background-color: #F8F9FA;
+  }
 
+ 
+
+  .co{
+    text-decoration: none;
+    color: white;
+  }
+  .a{
+    background-color: #28bcff;
+  }
+  .a:hover{
+    background-color: #2196f3;
+  }
+  .al{
+    background-color: #2196f3;
+  }
+  </style>
     <link rel="stylesheet" href="acss/style.css">
   
   <title>Better Career</title>
@@ -61,7 +80,7 @@ session_start();
     
               <li class="nav-item mr-3">
     
-                <a class="nav-link" href="home_company.php">Home</a>
+                <a class="nav-link" href="home.php">Home</a>
               </li>
               
               
@@ -78,20 +97,11 @@ session_start();
             </ul>
     
     
-            <!-- <ul class="navbar-nav ml-auto">
-     
-             <li class="nav-item mr-3">
-     
-               <a class="nav-link" href="">
-     
-                 <i class="fas fa-user-plus"></i></a>
-              </li>
-              
-            </ul> -->
+
           </div>
         </div>
       </nav>
-      <br><br>
+      <br><br><br>
       <div class="container">
         
           <div class="card pt-4 pb-4 pl-4">
@@ -99,8 +109,9 @@ session_start();
           </div>
       </div>
       <br>
+      <br>
 <div class="container">
-    <div class="row">
+    
 
         <?php
         include("session_check.php");
@@ -118,6 +129,7 @@ session_start();
             $answer2[]=$row['answer2'];
            
         ?>
+        <div class="row">
         <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
@@ -128,12 +140,19 @@ session_start();
             
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="YES" >YES<br>
+            </div>
+        </div>
+        <div class="col-md-2">
+            
+          <div class="form-check">
+
                 <input class="form-check-input" type="radio" name="<?php echo $row['sktid'];?>" value="NO" >NO<br>
                 
               </div>
         </div>
-       
-        
+       <br>
+      </div>
+    
               <?php
               $yes=$_POST[$row['sktid']];
               if($yes=="YES")
@@ -145,7 +164,7 @@ session_start();
 
               ?>
               
-        </div>
+       
         <?php
         
         }
@@ -154,7 +173,7 @@ session_start();
         
     
          <?php
-        if(isset($_POST['LEVEL1']))
+        if(isset($_POST['SUBMIT']))
         {
             $r1=0;
             
@@ -170,6 +189,13 @@ $result=mysqli_query($con,"select * from skilltest");
 while($row=mysqli_fetch_array($result)){
    
 ?>
+</div>
+<div class="container">
+
+
+
+<!-- part 2 -->
+<div class="row">
 <div class="col-md-8">
  
             <?php echo $row['question2']; ?>
@@ -180,11 +206,16 @@ while($row=mysqli_fetch_array($result)){
     
     <div class="form-check">
         <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="YES" >YES<br>
+      </div>
+    </div>
+        <div class="col-md-2">
+    
+          <div class="form-check">
         <input class="form-check-input" type="radio" name="<?php echo $row['sktid'].'r';?>" value="NO" >NO<br>
         
       </div>
 </div>
-
+</div>
 
       <?php
 
@@ -197,16 +228,19 @@ while($row=mysqli_fetch_array($result)){
       }
 
       ?>
-       </div>
+       <!-- </div> -->
         <?php
         
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="LEVEL1" name="LEVEL1">
+        <br><br>
+        <input type="submit" class="btn al btn-block" value="SUBMIT" name="SUBMIT">
+       
     </form>
+    <br><br><br>
          <?php
-        if(isset($_POST['LEVEL1']))
+        if(isset($_POST['SUBMIT']))
         {
           $r=0;
         //  print_r($answer1);
@@ -235,7 +269,7 @@ while($row=mysqli_fetch_array($result)){
                       $query2=mysqli_query($con,"select * from topics where tid='$ress'");
                       $res2=mysqli_fetch_array($query2,MYSQLI_ASSOC);
                       $ress2=$res2['topicName'];
-                      echo  "You are good at ".$ress2."<br>"; 
+                      echo "<br>". "You are good at ".$ress2; 
                   }
               }
               $r++;
@@ -245,11 +279,12 @@ while($row=mysqli_fetch_array($result)){
         }
        
         ?>
-        
-        
+        <br>
+     
     </div>
-</div>
-    
+    <br><br><br>
+<!-- container -->
+
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
 
