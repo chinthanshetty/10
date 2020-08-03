@@ -35,7 +35,26 @@ session_start();
     <link rel="stylesheet" href="acss/gijgo.css">
     <link rel="stylesheet" href="acss/animate.min.css">
     <link rel="stylesheet" href="acss/slicknav.css">
+    <style>body{
+    background-color: #F8F9FA;
+  }
 
+ 
+
+  .co{
+    text-decoration: none;
+    color: white;
+  }
+  .a{
+    background-color: #28bcff;
+  }
+  .a:hover{
+    background-color: #2196f3;
+  }
+  .al{
+    background-color: #2196f3;
+  }
+  </style>
     <link rel="stylesheet" href="acss/style.css">
   
   <title>Better Career</title>
