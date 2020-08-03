@@ -143,7 +143,8 @@ if(isset($_SESSION['username']))
            jd GROUP by jd.jid)bb on aa.jjid=bb.bbjid having match_percentage>=50 order by match_percentage desc";
           
       $home1=mysqli_query($con,$homie1);
-      print_r($home1);
+      
+      
       while($rw=mysqli_fetch_array($home1)){
         ?>
 
