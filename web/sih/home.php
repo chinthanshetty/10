@@ -142,7 +142,7 @@ if(isset($_SESSION['username']))
        include('session_check.php');
        include('config.php');
        $homie="SELECT jobid,firstname as companyname,jname as jobname,discription as jobdiscription,experience,
-       location,match_percentage from (SELECT * from(SELECT t3.jobid as jobid,t3.sum/t4.total as match_percentage
+       match_percentage from (SELECT * from(SELECT t3.jobid as jobid,t3.sum/t4.total as match_percentage
         from (select t1.jjid as jobid, sum(t1.cal) as sum from (SELECT j.jid as jjid,j.jdid as jdid ,j.lid as
          jlid, s.lid as slid,  if(s.lid > j.lid, (s.lid-j.lid)*10+100,100-(j.lid-s.lid)*30) as cal from jobdetails j,
           skills s,allusers au where j.tid = s.tid and s.uid = au.uid and au.username=username) t1 group by t1.jjid)
