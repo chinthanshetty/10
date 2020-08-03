@@ -234,7 +234,8 @@ while($row=mysqli_fetch_array($result)){
         }
        // echo $answer1;
         ?>
-        <input type="submit" value="SUBMIT" name="SUBMIT">
+        <br><br>
+        <input type="submit" class="btn btn-block" value="SUBMIT" name="SUBMIT">
     </form>
          <?php
         if(isset($_POST['SUBMIT']))
