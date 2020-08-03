@@ -82,9 +82,9 @@
     include('config.php');
         if(isset($_POST['otpsub'])){
                 $otp1=$_POST['OTP'];
-                echo $otp1;
+               // echo $otp1;
                 
-                echo $otp2;
+               // echo $otp2;
                 if($otp1==$otp2){
                   $query = "INSERT INTO allusers (firstname,lastname, username, email, password,usertype)  VALUES('$firstname','$lastname', '$username', '$email', '$password',$type)";
   	              mysqli_query($con, $query);
