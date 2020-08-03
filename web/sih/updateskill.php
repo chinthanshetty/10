@@ -252,6 +252,8 @@ while($row=mysqli_fetch_array($result)){
             }
             }
           }*/
+          <div class="container">
+            <div class="card border">
           $count=count($answer1);
           while($count!=$r)
           {
@@ -274,8 +276,8 @@ while($row=mysqli_fetch_array($result)){
               }
               $r++;
           }
-                
-            
+        </div>  
+      </div>   
         }
        
         ?>
