@@ -124,8 +124,8 @@ if(isset($_SESSION['username']))
       </div>
     </div>
   </nav>
-
-
+<br><br>
+<br>
   <section id="listings" class="py-4">
     <div class="container">
       <div class="row">
