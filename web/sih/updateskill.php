@@ -225,17 +225,17 @@ while($row=mysqli_fetch_array($result)){
               {
                   if($answer1[$r]==1)
                   {
-                      echo "hey";
+                      //echo "hey";
                       $r1=$r+1;
                       $query=mysqli_query($con,"select * from skilltest where sktid='$r1'");
                       $res=mysqli_fetch_array($query,MYSQLI_ASSOC);
                       $ress=$res['tid'];
-                      echo $ress;
+                     // echo $ress;
                       //echo $query;
                       $query2=mysqli_query($con,"select * from topics where tid='$ress'");
                       $res2=mysqli_fetch_array($query2,MYSQLI_ASSOC);
                       $ress2=$res2['topicName'];
-                      echo $ress2;
+                      echo 'You are good at '.$ress2;
                   }
               }
               $r++;
