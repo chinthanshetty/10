@@ -17,7 +17,7 @@ if (isset($_POST['login_user'])) {
   	$password = md5($password);
   	$query = "SELECT * FROM allusers WHERE( username='$username' OR email='$username') AND password='$password'";
   	$results = mysqli_query($con, $query);
-  	if (mysqli_num_rows($results) == 1 and $results['usertype']=="1") {
+  	if (mysqli_num_rows($results) == 1) {
      
       $_SESSION['username'] = $username;
       
