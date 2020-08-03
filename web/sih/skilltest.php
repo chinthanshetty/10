@@ -37,26 +37,7 @@ session_start();
     <link rel="stylesheet" href="acss/slicknav.css">
 
     <link rel="stylesheet" href="acss/style.css">
-    <style>body{
-    background-color: #F8F9FA;
-  }
-
- 
-
-  .co{
-    text-decoration: none;
-    color: white;
-  }
-  .a{
-    background-color: #28bcff;
-  }
-  .a:hover{
-    background-color: #2196f3;
-  }
-  .al{
-    background-color: #2196f3;
-  }
-  </style>
+  
   <title>Better Career</title>
 </head>
 <body>
@@ -96,7 +77,7 @@ session_start();
               
             </ul>
     
-    HERE TEST
+    
             <!-- <ul class="navbar-nav ml-auto">
      
              <li class="nav-item mr-3">
@@ -119,7 +100,7 @@ session_start();
       </div>
       <br>
 <div class="container">
-    <div class="row">   
+    <div class="row">
 
         <?php
         include("session_check.php");
@@ -166,9 +147,11 @@ session_start();
               
         </div>
         <?php
+        
         }
        // echo $answer1;
         ?>
+
          <?php
         if(isset($_POST['LEVEL1']))
         {
