@@ -80,7 +80,7 @@ session_start();
     
               <li class="nav-item mr-3">
     
-                <a class="nav-link" href="home_company.php">Home</a>
+                <a class="nav-link" href="home.php">Home</a>
               </li>
               
               
