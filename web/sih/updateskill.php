@@ -182,6 +182,7 @@ while($row=mysqli_fetch_array($result)){
    
 ?>
 </div>
+<div class="row">
 <div class="col-md-8">
  
             <?php echo $row['question2']; ?>
@@ -209,7 +210,7 @@ while($row=mysqli_fetch_array($result)){
       }
 
       ?>
-       </div>
+       <!-- </div> -->
         <?php
         
         }
@@ -262,6 +263,7 @@ while($row=mysqli_fetch_array($result)){
     </div>
 </div>
 </div>
+<!-- container -->
 </div>
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
