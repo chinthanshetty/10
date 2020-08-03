@@ -136,6 +136,13 @@ $("#suggesstion-box").hide();
  
              <i class="fas fa-user-plus"></i> SKILL TEST</a>
           </li>
+		 <li class="nav-item mr-3">
+ 
+           <a class="nav-link" href="http://127.0.0.1:5000/">
+ 
+             <i class="fas fa-user-plus"></i> Chat Now</a>
+          </li>
+		
           
 		 <li class="nav-item mr-3">
  
