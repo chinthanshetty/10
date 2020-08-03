@@ -119,7 +119,7 @@ session_start();
       </div>
       <br>
 <div class="container">
-    <div class="row">
+    <div class="row">   
 
         <?php
         include("session_check.php");
