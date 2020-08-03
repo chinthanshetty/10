@@ -282,6 +282,7 @@ while($row=mysqli_fetch_array($result)){
         <br>
       </div>
     </div>
+  </div>
     <br><br><br>
 <!-- container -->
 
