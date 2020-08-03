@@ -329,6 +329,7 @@ while($row=mysqli_fetch_array($query))
                 <i class="fas fa-user"></i> My Skills</h4>
             </div>
             <div class="card-body">
+            <div style="overflow-x:auto;">
               <table class="table table-striped">
 
                 <thead>
@@ -401,7 +402,7 @@ while($row=mysqli_fetch_array($query))
   
             
                 </tbody>
-              </table>
+              </table></div>
             </div>
           </div>
         </div>
