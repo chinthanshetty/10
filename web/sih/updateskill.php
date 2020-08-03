@@ -214,7 +214,7 @@ while($row=mysqli_fetch_array($result)){
           foreach(array_combine($answer1,$answer2) as $a1 => $a2){
             if($a1==$a2){
                 if($a1==1){
-              echo "hey";
+              echo $a1;
             }
             }
           }
