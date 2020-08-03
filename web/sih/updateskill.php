@@ -268,7 +268,8 @@ while($row=mysqli_fetch_array($result)){
         
     </div>
 </div>
-    
+</div>
+</div>
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
 
