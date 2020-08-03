@@ -143,6 +143,10 @@ if(isset($_SESSION['username']))
           from jobdetails jd GROUP by jd.jid)t4 on t3.jobid=t4.jjid having match_percentage>=50 order by match_percentage desc");
       
       while($rw=mysqli_fetch_array($homie1)){
+        $u=$rw['empusername'];
+         $r1=mysqli_query($con,"select * from allusers where username='$u'");
+         $sql1=mysqli_fetch_array($r1,MYSQLI_ASSOC);
+         $email=$sql1['email'];
         ?>
 
 	      
@@ -170,7 +174,7 @@ if(isset($_SESSION['username']))
                   <i class="fas fa-car"></i>  Skill match :<?php echo $rw['match_percentage'];?> </div>
               </div>
               <hr>
-              <a href="listing.html" class="btn btn-primary btn-block">Apply Now</a>
+              <a href="mailto:<?php echo $email; ?>" class="btn btn-primary btn-block">Contact</a>
             </div>
           </div>
         </div>
