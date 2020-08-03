@@ -129,7 +129,7 @@ session_start();
             $answer2[]=$row['answer2'];
            
         ?>
-        
+        <div class="row">
         <div class="col-md-8">
          
                     <?php echo $row['question1']; ?>
@@ -150,8 +150,8 @@ session_start();
                 
               </div>
         </div>
-       
-     
+       <br>
+      </div>
     
               <?php
               $yes=$_POST[$row['sktid']];
