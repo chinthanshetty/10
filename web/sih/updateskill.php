@@ -35,7 +35,26 @@ session_start();
     <link rel="stylesheet" href="acss/gijgo.css">
     <link rel="stylesheet" href="acss/animate.min.css">
     <link rel="stylesheet" href="acss/slicknav.css">
+    <style>body{
+    background-color: #F8F9FA;
+  }
 
+ 
+
+  .co{
+    text-decoration: none;
+    color: white;
+  }
+  .a{
+    background-color: #28bcff;
+  }
+  .a:hover{
+    background-color: #2196f3;
+  }
+  .al{
+    background-color: #2196f3;
+  }
+  </style>
     <link rel="stylesheet" href="acss/style.css">
   
   <title>Better Career</title>
@@ -78,20 +97,11 @@ session_start();
             </ul>
     
     
-            <!-- <ul class="navbar-nav ml-auto">
-     
-             <li class="nav-item mr-3">
-     
-               <a class="nav-link" href="">
-     
-                 <i class="fas fa-user-plus"></i></a>
-              </li>
-              
-            </ul> -->
+
           </div>
         </div>
       </nav>
-      <br><br>
+      <br><br><br>
       <div class="container">
         
           <div class="card pt-4 pb-4 pl-4">
@@ -133,7 +143,8 @@ session_start();
               </div>
         </div>
        
-        
+     
+    
               <?php
               $yes=$_POST[$row['sktid']];
               if($yes=="YES")
@@ -145,7 +156,7 @@ session_start();
 
               ?>
               
-        </div>
+       
         <?php
         
         }
@@ -170,6 +181,8 @@ $result=mysqli_query($con,"select * from skilltest");
 while($row=mysqli_fetch_array($result)){
    
 ?>
+</div>
+<div class="row">
 <div class="col-md-8">
  
             <?php echo $row['question2']; ?>
@@ -197,7 +210,7 @@ while($row=mysqli_fetch_array($result)){
       }
 
       ?>
-       </div>
+       <!-- </div> -->
         <?php
         
         }
@@ -246,10 +259,12 @@ while($row=mysqli_fetch_array($result)){
        
         ?>
         
-        
+      </div>
     </div>
 </div>
-    
+</div>
+<!-- container -->
+</div>
 
 <script src="assets/js/jquery-3.3.1.min.js "></script>
 
