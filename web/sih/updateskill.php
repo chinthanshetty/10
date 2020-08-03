@@ -111,7 +111,7 @@ session_start();
             <?php
         while($row=mysqli_fetch_array($result)){
             $sktid[]=$row['sktid'];
-            $tid[]=$row['tid'];
+            $tidd[]=$row['tid'];
             $question1[]=$row['question1'];
             $question2[]=$row['question2'];
             $answer1[]=$row['answer1'];
