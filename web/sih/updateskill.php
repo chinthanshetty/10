@@ -138,7 +138,7 @@ session_start();
               $yes=$_POST[$row['sktid']];
               if($yes=="YES")
               {
-                  $answer1[$row['sktid']]='1';
+                  $answer1[$row['sktid']-1]='1';
                   //echo $answer1[$row['sktid']];
                  // echo "me";
               }
@@ -191,7 +191,7 @@ while($row=mysqli_fetch_array($result)){
       $yes=$_POST[$row['sktid'].'r'];
       if($yes=="YES")
       {
-          $answer2[$row['sktid']]='1';
+          $answer2[$row['sktid']-1]='1';
           //echo $answer2[$row['sktid']];
           
       }
