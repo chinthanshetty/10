@@ -110,9 +110,6 @@ session_start();
       </div>
       <br>
 
-
-
-
 <div class="container">
     
 
@@ -280,7 +277,6 @@ while($row=mysqli_fetch_array($result)){
         
       </div>
 
-</div>
 <!-- container -->
 </div>
 
