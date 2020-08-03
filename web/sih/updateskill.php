@@ -192,6 +192,7 @@ $result=mysqli_query($con,"select * from skilltest");
 while($row=mysqli_fetch_array($result)){
    
 ?>
+<br>
 </div>
 
 <!-- container -->
