@@ -152,7 +152,9 @@ if(isset($_SESSION['username']))
             
        $home=mysqli_query($con,$homie);
        print_r($home);
+
        while($rw=mysqli_fetch_array($home)){
+         echo "hey";
          ?>
  
 
