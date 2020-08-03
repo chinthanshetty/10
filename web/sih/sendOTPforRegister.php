@@ -87,7 +87,8 @@
                // echo $otp2;
                 if($otp1==$otp2){
                   $query = "INSERT INTO allusers (firstname,lastname, username, email, password,usertype)  VALUES('$firstname','$lastname', '$username', '$email', '$password',$type)";
-  	              mysqli_query($con, $query);
+                  mysqli_query($con, $query);
+                  session_destroy();
                     header("location:login.php");
                 }
                 else{
