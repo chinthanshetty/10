@@ -151,7 +151,7 @@ session_start();
               </div>
         </div>
        <br>
-      
+      </div>
     
               <?php
               $yes=$_POST[$row['sktid']];
