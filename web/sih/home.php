@@ -140,6 +140,7 @@ if(isset($_SESSION['username']))
 
        <?php
        include('session_check.php');
+       include('config.php');
        $homie="SELECT jobid,firstname as companyname,jname as jobname,discription as jobdiscription,experience,
        location,match_percentage from (SELECT * from(SELECT t3.jobid as jobid,t3.sum/t4.total as match_percentage
         from (select t1.jjid as jobid, sum(t1.cal) as sum from (SELECT j.jid as jjid,j.jdid as jdid ,j.lid as
@@ -150,13 +151,14 @@ if(isset($_SESSION['username']))
             having match_percentage>=50 order by match_percentage desc";
             
        $home=mysqli_query($con,$homie);
+       print_r($home);
        while($rw=mysqli_fetch_array($home)){
          ?>
  
 
 
  <!-- <div style="clear:both">
-         <p><?php echo $rw['companyname'].'-'.$rw['jobname'].'-'.$rw['jobdiscription'].'-'.$rw['match_percentage'];?></p><br>
+         </p><br>
          </div> -->
   <!-- Listing 1 -->
   <div class="col-md-6 col-lg-4 mb-4">
