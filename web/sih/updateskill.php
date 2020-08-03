@@ -197,6 +197,8 @@ while($row=mysqli_fetch_array($result)){
 <!-- container -->
 
 </div>
+
+<br><br><br>
 <!-- part 2 -->
 <div class="row">
 <div class="col-md-8">
