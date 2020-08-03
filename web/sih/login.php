@@ -1,5 +1,6 @@
 <?php 
 include('config.php');
+include('errors.php');
 session_start();
 if (isset($_POST['login_user'])) {
   $username = mysqli_real_escape_string($con, $_POST['username']);
